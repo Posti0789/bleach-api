@@ -1,13 +1,13 @@
-const { Sequelize, DataTypes } = require("sequelize");
+// models/character.js
 
-module.exports = (sequelize) => {
-  const Character = sequelize.define("Character", {
+module.exports = (sequelize, DataTypes) => {
+  const Character = sequelize.define('Character', {
     nombre: {
       type: DataTypes.STRING,
       allowNull: false
     },
     raza: {
-      type: DataTypes.JSON,
+      type: DataTypes.STRING,
       allowNull: false
     },
     cumpleaños: {
@@ -47,25 +47,29 @@ module.exports = (sequelize) => {
       allowNull: true
     },
     nivel_de_poder: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: true
     },
     galeria: {
-      type: DataTypes.JSON,
+      type: DataTypes.STRING,
       allowNull: true
     },
     historia: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: true
     },
     personalidad: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: true
     },
     batallas: {
       type: DataTypes.TEXT,
       allowNull: true
     }
+    
+  }, {
+    tableName: 'characters',
+    timestamps: true,  // Si usas createdAt y updatedAt
   });
 
   return Character;
