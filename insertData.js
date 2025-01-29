@@ -7,7 +7,7 @@ const Character = require("./models/character")(
 console.log(Character); // Esto debe mostrar la función de creación del modelo
 
 const characters = [
-  /*{
+  {
     nombre: "Uryū Ishida",
     raza: "Quincy",
     cumpleaños: "6 de noviembre",
@@ -796,7 +796,7 @@ const characters = [
               Unohana es una persona sabia y compasiva, pero no duda en luchar si es necesario para proteger a los demás.
           `,
           batallas: "Unohana vs Kenpachi Zaraki[Perdedora], Unohana vs Yachiru Kusajishi[Ganadora]",
-        }*/
+        },
           
             {
               nombre: "Tōsen Kaname",
@@ -921,7 +921,948 @@ const characters = [
                       A pesar de su aparente indiferencia, Gin tiene un pasado doloroso que lo llevó a tomar las decisiones que tomó. Su lealtad a Aizen y su participación en la traición a la Sociedad de Almas son parte de su trágica historia.
                   `,
               batallas: "Gin vs Aizen[Perdedor], Gin vs Hitsugaya[Empate]",
-            }
+            },
+
+            {
+              nombre: "Shinji Hirako",
+              raza: "Shinigami, Vizard",
+              cumpleaños: "10 de mayo",
+              altura: "1.76 m",
+              peso: "60 kg",
+              afiliacion: "Capitán de la 5ª División del Gotei 13, Vizards",
+              ocupacion: "Capitán, Exiliado (anteriormente)",
+              shikai: "Sakanade",
+              bankai: "Sakashima Yokoshima Happōfusagar",
+              poderes: `
+                      Shinji Hirako es un shinigami y líder de los Vizards, un grupo de exiliados que han obtenido poderes de Hollow. Su Zanpakutō, Sakanade, tiene la capacidad única de invertir los sentidos de su oponente, confundiendo su percepción de dirección y ataque.
+                      Como Vizard, también puede acceder a una máscara de Hollow, lo que le otorga un aumento significativo en su velocidad, fuerza y resistencia, además de habilidades regenerativas.
+                  `,
+              habilidades: `
+                      - Sakanade (Shikai): Su Zanpakutō invierte los sentidos de sus oponentes, haciendo que izquierda y derecha, arriba y abajo, y adelante y atrás se intercambien, confundiendo a su enemigo y haciéndolo vulnerable a los ataques.
+                      - Poder de Vizard: Como Vizard, Shinji puede manifestar una máscara de Hollow, aumentando drásticamente su fuerza, velocidad y resistencia, además de permitirle utilizar ataques basados en energía Hollow.
+                      - Experto en Zanjutsu y Hakuda: Como ex-capitán, Shinji es un maestro en el combate con espada y cuerpo a cuerpo, capaz de enfrentarse a enemigos de alto nivel sin problemas.
+                      - Gran estratega: Su inteligencia y capacidad táctica le permiten manipular el campo de batalla a su favor, utilizando su Zanpakutō y habilidades de manera óptima.
+                  `,
+              nivel_de_poder: `
+                      Como ex-capitán del Gotei 13 y líder de los Vizards, Shinji es un combatiente extremadamente poderoso. Su Shikai es una de las habilidades más desconcertantes de la serie, ya que altera completamente la percepción de su oponente, dándole una ventaja táctica abrumadora.
+                      Su dominio del poder Hollow lo hace aún más formidable, permitiéndole enfrentarse a enemigos de alto nivel como Aizen y los Espadas. Aunque su Bankai no ha sido revelado, su nivel de poder es comparable al de los capitanes más fuertes del Gotei 13.
+                  `,
+              galeria: JSON.stringify([
+                "https://static.wikia.nocookie.net/bleach/images/b/b9/Ep125ShinjiHirako.png/revision/latest/scale-to-width/360?cb=20231105205939&path-prefix=en",
+                "https://i.pinimg.com/736x/6b/da/76/6bda76a639b92fe86301358c6fb0fbf3.jpg",
+                "https://preview.redd.it/9zyb9pf6h83b1.png?width=640&crop=smart&auto=webp&s=a17537ba2e1950e36cfb8b00b850db1288757c54",
+                "https://i.pinimg.com/736x/0a/5e/78/0a5e780c08fa68f11477b000397597bc.jpg"
+              ]),
+              historia: `
+                      Shinji Hirako fue el capitán de la 5ª División del Gotei 13 antes de ser traicionado por Aizen y convertido en un Vizard. Junto con otros capitanes y tenientes, fue víctima de los experimentos de Aizen con la Hollowficación, lo que los obligó a huir de la Sociedad de Almas.
+                      Durante años, Shinji y los Vizards vivieron en el mundo humano, entrenando y esperando el momento de enfrentarse a Aizen. Eventualmente, regresó al Gotei 13 y retomó su puesto como capitán de la 5ª División, demostrando su lealtad a la Sociedad de Almas.
+                  `,
+              personalidad: `
+                      Shinji es un personaje carismático y relajado, con una personalidad excéntrica y un gran sentido del humor. A pesar de su actitud despreocupada, es un líder sabio y experimentado que se preocupa profundamente por sus compañeros.
+                      Es astuto y desconfiado, especialmente cuando se trata de Aizen, ya que fue una de sus primeras víctimas. Su naturaleza juguetona oculta una mente brillante y una gran capacidad de análisis en combate.
+                  `,
+              batallas: "Shinji vs Aizen[Perdedor], Shinji vs Grimmjow[Empate]",
+            },
+            {
+              nombre: "Mayuri Kurotsuchi",
+              raza: "Shinigami",
+              cumpleaños: "30 de marzo",
+              altura: "1.74 m",
+              peso: "54 kg",
+              afiliacion: "Capitán de la 12ª División del Gotei 13, Instituto de Investigación y Desarrollo Shinigami",
+              ocupacion: "Científico, Capitán",
+              shikai: "Ashisogi Jizō",
+              bankai: "Konjiki Ashisogi Jizō",
+              poderes: `
+                      Mayuri Kurotsuchi es uno de los shinigamis más inteligentes y despiadados del Gotei 13. Como capitán de la 12ª División y jefe del Instituto de Investigación y Desarrollo Shinigami, es un maestro de la biotecnología y la manipulación genética.
+                      Su Zanpakutō, Ashisogi Jizō, libera una toxina paralizante en su Shikai, mientras que su Bankai, Konjiki Ashisogi Jizō, invoca una criatura gigante con un veneno letal que ataca indiscriminadamente.
+                  `,
+              habilidades: `
+                      - Ashisogi Jizō (Shikai): Su Zanpakutō libera una toxina que paraliza el sistema nervioso de su oponente, impidiendo que controle su cuerpo, pero sin causar la muerte inmediata.
+                      - Konjiki Ashisogi Jizō (Bankai): Su Bankai libera una enorme criatura con múltiples cuchillas en su boca, capaz de segregar un veneno letal que afecta a cualquier ser vivo en su rango.
+                      - Regeneración corporal: Mayuri ha modificado su propio cuerpo para ser capaz de regenerar extremidades y órganos dañados a voluntad.
+                      - Manipulación genética: Puede alterar su cuerpo y el de otros seres mediante experimentos científicos, creando mejoras biológicas únicas.
+                      - Intelecto superior: Es uno de los shinigamis más inteligentes de la Sociedad de Almas, con una mente analítica y despiadada que le permite crear estrategias complejas en batalla.
+                  `,
+              nivel_de_poder: `
+                      Aunque Mayuri no es un luchador tradicional, su intelecto y adaptabilidad lo convierten en un oponente extremadamente peligroso. Su uso de venenos, modificaciones corporales y tácticas impredecibles le han permitido vencer a enemigos poderosos, como Szayelaporro Granz y Pernida Parnkgjas.
+                      Su Bankai es una de las habilidades más letales de la serie, ya que su veneno es casi imposible de contrarrestar. Además, Mayuri siempre tiene múltiples planes de respaldo y modificaciones preparadas para cualquier situación.
+                  `,
+              galeria: JSON.stringify([
+                "https://preview.redd.it/ouic50v3n5gc1.jpeg?auto=webp&s=c06f76af8bf3d7ad549ac646f390cdf16fda3c4b",
+                "https://i.pinimg.com/736x/6b/bc/88/6bbc8883ba1426ebc758a7ed8d5a54ac.jpg",
+                "https://wallpapers.com/images/featured/mayuri-kurotsuchi-w5p2sy0c7b9v59cr.jpg",
+                "https://i.pinimg.com/736x/f3/2c/11/f32c11fe679145a56874fad97b569bee.jpg"
+              ]),
+              historia: `
+                      Mayuri Kurotsuchi fue encarcelado en la 2ª División antes de ser liberado por Kisuke Urahara, quien lo convirtió en su segundo al mando en el Instituto de Investigación y Desarrollo Shinigami. Tras la partida de Urahara, Mayuri se convirtió en el jefe del instituto y en el capitán de la 12ª División.
+                      A lo largo de la serie, Mayuri demuestra ser un científico despiadado, dispuesto a experimentar con cualquier ser vivo, incluyendo sus propios aliados, para avanzar en su investigación. Sin embargo, a pesar de su naturaleza cruel, es un miembro valioso del Gotei 13 y ha contribuido a la derrota de múltiples enemigos con su intelecto y habilidades únicas.
+                  `,
+              personalidad: `
+                      Mayuri es un personaje excéntrico, sádico y extremadamente calculador. No tiene escrúpulos cuando se trata de experimentar con otros, y ve la vida como un simple objeto de estudio. Su manera de hablar y actuar es teatral, y disfruta humillar a sus enemigos con su superioridad intelectual.
+                      A pesar de su frialdad, muestra cierto respeto por aquellos que considera dignos o que han demostrado ser útiles para su investigación. Su relación con su "hija" artificial, Nemu Kurotsuchi, también muestra un lado más complejo de su personalidad.
+                  `,
+              batallas: "Mayuri vs Uryū Ishida[Perdedor], Mayuri vs Szayelaporro Granz[Ganador], Mayuri vs Pernida Parnkgjas[Ganador]",
+            },
+            
+              {
+                nombre: "Isane Kotetsu",
+                raza: "Shinigami",
+                cumpleaños: "2 de agosto",
+                altura: "1.87 m",
+                peso: "70 kg",
+                afiliacion: "Gotei 13, 4ª División",
+                ocupacion: "Capitana de la 4ª División",
+                shikai: "Itegumo",
+                bankai: "Desconocido",
+                poderes: `
+                        Isane Kotetsu es la teniente de la 4ª División, especializada en curación y apoyo en combate. Su Zanpakutō, Itegumo, tiene una forma única que se divide en tres hojas, aunque su capacidad ofensiva es limitada en comparación con otros shinigamis.
+                        Como miembro de la 4ª División, posee una gran habilidad en kido de curación, lo que la convierte en una pieza clave en la recuperación de aliados heridos en batalla.
+                    `,
+                habilidades: `
+                        - Experta en Kido de curación: Como teniente de la 4ª División, Isane domina las técnicas de curación, siendo capaz de sanar heridas graves en poco tiempo.
+                        - Itegumo (Shikai): Su Zanpakutō se divide en tres hojas, lo que le permite realizar ataques rápidos y multidireccionales.
+                        - Comunicación telepática: Tiene la capacidad de transmitir mensajes a largas distancias usando kido.
+                        - Gran velocidad y reflejos: A pesar de no ser una combatiente de primera línea, su entrenamiento le permite reaccionar rápidamente en situaciones de peligro.
+                    `,
+                nivel_de_poder: `
+                        Isane no es una luchadora destacada en combate directo, pero su habilidad en kido y curación la hacen indispensable en el campo de batalla. Su Shikai no es particularmente poderoso en comparación con otras Zanpakutō, pero su capacidad de apoyo y estrategia la convierten en una aliada valiosa.
+                    `,
+                galeria: JSON.stringify([
+                  "https://static.wikia.nocookie.net/bleach/images/2/25/Kotetsu_Isane_P.P2.png/revision/latest?cb=20221112115354&path-prefix=es",
+                  "https://static.wikia.nocookie.net/bleach/images/1/1b/571Isane_profile.png/revision/latest?cb=20200322074711&path-prefix=en",
+                  "https://img.favpng.com/19/19/24/dulce-guerrero-isane-kotetsu-retsu-unohana-bleach-rangiku-matsumoto-png-favpng-YQfq2qTau9mpXUa6U7UTHQ3bn_t.jpg",
+                  "https://static.wikia.nocookie.net/bleach/images/b/b5/685Isane_profile.png/revision/latest?cb=20200322074311&path-prefix=en"
+                ]),
+                historia: `
+                        Isane Kotetsu es la leal teniente de la 4ª División bajo el mando de Retsu Unohana. Su papel principal es asistir en la curación de los heridos durante las batallas y mantener el orden en la Sociedad de Almas.
+                        Durante la traición de Aizen, Isane fue una de las primeras en advertir a los demás sobre su plan, utilizando su kido de comunicación. Tras la muerte de Unohana en la Guerra Sangrienta de los Mil Años, Isane se convierte en la capitana de la 4ª División, asumiendo el legado de su maestra.
+                    `,
+                personalidad: `
+                        Isane es seria y responsable, pero también tiene una personalidad nerviosa y propensa a la preocupación. A pesar de su apariencia alta e imponente, es amable y protectora con sus compañeros.
+                        Es muy leal a su capitana y a la 4ª División, y aunque no es la más fuerte en combate, su valentía y determinación la convierten en una shinigami respetada dentro del Gotei 13.
+                    `,
+                batallas: "Isane vs Aizen[Perdedor], Isane vs Quincy Soldados[Ganadora]",
+              },
+
+              {
+                nombre: "Hisagi Shūhei",
+                raza: "Shinigami",
+                cumpleaños: "14 de agosto",
+                altura: "1.81 m",
+                peso: "67 kg",
+                afiliacion: "Gotei 13, 9ª División",
+                ocupacion: "Teniente de la 9ª División",
+                shikai: "Kazeshini",
+                bankai: "Kazeshini: Fushi no Kōjyō",
+                poderes: `
+                        Hisagi Shūhei es el teniente de la 9ª División del Gotei 13. Aunque es un shinigami de alto nivel, odia la violencia y prefiere evitar el combate innecesario.
+                        Su Zanpakutō, Kazeshini, toma la forma de dos guadañas unidas por cadenas, lo que le permite realizar ataques a larga y corta distancia con gran agilidad.
+                        A pesar de su naturaleza pacífica, Hisagi es un combatiente extremadamente hábil, con un gran dominio del Zanjutsu, Hakuda y Kido.
+                    `,
+                habilidades: `
+                        - Shikai: Kazeshini: Su Zanpakutō adopta la forma de dos guadañas unidas por cadenas, permitiéndole atacar con rapidez y precisión.
+                        - Experto en combate cuerpo a cuerpo: Su entrenamiento en Hakuda lo convierte en un luchador formidable incluso sin su Zanpakutō.
+                        - Habilidad con Kido: Puede usar técnicas de Kido tanto ofensivas como defensivas para complementar su estilo de lucha.
+                        - Gran velocidad y reflejos: Su agilidad le permite esquivar ataques y contraatacar rápidamente.
+                        - Estratega: Es un luchador inteligente que analiza a sus oponentes y encuentra sus debilidades.
+                    `,
+                nivel_de_poder: `
+                        Hisagi es un shinigami de gran habilidad, pero aún no ha alcanzado el nivel de Bankai. A pesar de esto, su Shikai es extremadamente peligroso en combate, 
+                        y su destreza en combate cuerpo a cuerpo lo hace un oponente formidable. Su poder y experiencia le permiten enfrentarse a enemigos de alto nivel sin depender de una liberación avanzada.
+                    `,
+                galeria: JSON.stringify([
+                  "https://static.wikia.nocookie.net/bleach/images/1/10/Ep216HisagiProfile.png/revision/latest?cb=20220503231623&path-prefix=en",
+                  "https://preview.redd.it/vk74a4sptuzc1.jpeg?width=640&crop=smart&auto=webp&s=b39ef9a197ffd92b00b2a35ede545c0587141302",
+                  "https://preview.redd.it/what-if-we-actually-got-to-see-hisagis-bankai-hisagi-rewrite-v0-hso7lwqqv9ra1.png?width=949&format=png&auto=webp&s=929b8071e07eae833a282091ef2c2738e1254e61",
+                  "https://preview.redd.it/w6ggwefttsp91.jpg?auto=webp&s=7ad91ae0ef5bfbd1ba06e628b5b56d76bc1d5392"
+                ]),
+                historia: `
+                        Hisagi Shūhei es un talentoso shinigami que fue salvado en su infancia por Kensei Muguruma, lo que lo inspiró a unirse al Gotei 13 y convertirse en teniente de la 9ª División.
+                        Durante la traición de Aizen, luchó contra Kaname Tōsen, su antiguo capitán, y aunque intentó hacerle entrar en razón, se vio obligado a enfrentarlo en una batalla mortal.
+                        Posteriormente, desempeñó un papel clave en la Guerra Sangrienta de los Mil Años, luchando contra los Quincy y demostrando su valentía como líder de la 9ª División.
+                    `,
+                personalidad: `
+                        Hisagi es un shinigami serio y responsable, que valora la paz y evita el combate innecesario. A pesar de su apariencia ruda y su Zanpakutō de aspecto siniestro, 
+                        es una persona amable y reflexiva. Admira profundamente a su difunto capitán y se esfuerza por seguir su ejemplo, aunque a veces duda de su propia fuerza y habilidades.
+                    `,
+                batallas: "Hisagi vs Findorr[Ganador], Hisagi vs Tōsen[Ganador], Hisagi vs Mask De Masculine[Perdedor]",
+              },
+            
+              {
+                nombre: "Izuru Kira",
+                raza: "Shinigami",
+                cumpleaños: "27 de marzo",
+                altura: "1.73 m",
+                peso: "56 kg",
+                afiliacion: "Gotei 13, 3ª División",
+                ocupacion: "Teniente de la 3ª División",
+                shikai: "Wabisuke",
+                bankai: "Desconocido",
+                poderes: `
+                        Izuru Kira es el teniente de la 3ª División del Gotei 13. Es un espadachín experto y un estratega brillante, aunque su personalidad es melancólica y reflexiva.
+                        Su Zanpakutō, Wabisuke, tiene la habilidad única de duplicar el peso de todo lo que golpea, lo que le permite inutilizar las armas de sus oponentes o hacer que caigan de rodillas por su propio peso.
+                        Aunque no ha mostrado su Bankai, su Shikai lo convierte en un combatiente peligroso que puede derrotar a oponentes más fuertes con inteligencia y técnica.
+                    `,
+                habilidades: `
+                        - Shikai: Wabisuke: Su espada dobla el peso de cualquier objeto o persona que golpea, haciéndolos cada vez más pesados hasta que no pueden moverse.
+                        - Maestro en Zanjutsu: Es un espadachín hábil que combina su Zanpakutō con tácticas inteligentes en combate.
+                        - Habilidad con Kido: Puede usar técnicas de Kido tanto ofensivas como defensivas para apoyar su estilo de lucha.
+                        - Gran resistencia: A pesar de su apariencia frágil, Kira ha demostrado una gran resistencia en combate y una determinación inquebrantable.
+                        - Estratega: Su mentalidad analítica le permite encontrar las debilidades de sus enemigos y aprovecharlas en batalla.
+                    `,
+                nivel_de_poder: `
+                        Izuru Kira es un shinigami talentoso, aunque su poder no está al nivel de un capitán. Sin embargo, su Shikai es extremadamente útil en combate, permitiéndole incapacitar a enemigos más fuertes 
+                        al hacer que sus armas o cuerpos sean demasiado pesados para moverse. Su nivel de poder lo convierte en un rival peligroso en combates prolongados.
+                    `,
+                galeria: JSON.stringify([
+                  "https://i.pinimg.com/736x/8d/b4/48/8db44860be7af6aa78a13982c66d2589.jpg",
+                  "https://i.redd.it/ixmmmye8onz61.jpg",
+                  "https://static.wikia.nocookie.net/vsbattles/images/1/1f/IzuruKira_%28Game%29.png/revision/latest?cb=20211121182559",
+                  "https://static.wikia.nocookie.net/bleach/images/b/b7/Wabisuke.jpeg/revision/latest?cb=20211007190720&path-prefix=es"
+                ]),
+                historia: `
+                        Izuru Kira fue uno de los mejores estudiantes de la Academia Shinigami y se convirtió en teniente de la 3ª División bajo la tutela de Gin Ichimaru. 
+                        Su lealtad fue puesta a prueba cuando Gin traicionó el Gotei 13, dejándolo confundido y sin rumbo. A pesar de esto, Kira siguió adelante y asumió su papel como líder de la 3ª División.
+                        Durante la Guerra Sangrienta de los Mil Años, fue gravemente herido por los Quincy, pero logró sobrevivir y regresar al combate, demostrando su determinación y fortaleza.
+                    `,
+                personalidad: `
+                        Kira es un shinigami melancólico y serio, con una visión pesimista de la vida. Cree que la guerra y la muerte son inevitables y carga con un profundo sentimiento de culpa 
+                        por la traición de su antiguo capitán. A pesar de esto, es leal y comprometido con su deber, y hará lo que sea necesario para proteger a sus compañeros.
+                    `,
+                batallas: "Kira vs Abirama[Ganador], Kira vs Bazz-B[Perdedor], Kira vs Lille Barro[Ganador]",
+              },
+
+              {
+                nombre: "Rangiku Matsumoto",
+                raza: "Shinigami",
+                cumpleaños: "29 de septiembre",
+                altura: "1.72 m",
+                peso: "57 kg",
+                afiliacion: "Gotei 13, 10ª División",
+                ocupacion: "Teniente de la 10ª División",
+                shikai: "Haineko",
+                bankai: "Desconocido",
+                poderes: `
+                        Rangiku Matsumoto es la teniente de la 10ª División del Gotei 13. Es una combatiente talentosa con una personalidad relajada y despreocupada, aunque esconde una gran inteligencia y determinación.
+                        Su Zanpakutō, Haineko, se desintegra en ceniza al activarse en su Shikai, permitiéndole atacar a sus oponentes con un polvo cortante que puede moverse a voluntad.
+                        Aunque no ha demostrado tener un Bankai, su Shikai le permite luchar de manera efectiva contra enemigos poderosos, usando su astucia para aprovechar su ventaja en combate.
+                    `,
+                habilidades: `
+                        - Shikai: Haineko: Su Zanpakutō se convierte en ceniza y corta a sus enemigos desde cualquier dirección, dándole una gran versatilidad en combate.
+                        - Maestra en Zanjutsu: Es una espadachina hábil que usa su Shikai de forma estratégica para desarmar y confundir a sus oponentes.
+                        - Habilidad con Kido: Aunque no es su fuerte, puede usar Kido para ataques sorpresa o apoyo en combate.
+                        - Gran resistencia: A pesar de su actitud despreocupada, ha demostrado una gran resistencia en batalla y la capacidad de continuar luchando incluso en situaciones difíciles.
+                        - Inteligencia táctica: Aunque suele parecer perezosa, Rangiku es una estratega astuta que sabe cuándo y cómo atacar.
+                    `,
+                nivel_de_poder: `
+                        Rangiku Matsumoto es una teniente fuerte, pero no se encuentra entre los shinigamis más poderosos. Su Shikai le da una ventaja táctica considerable, permitiéndole atacar desde múltiples ángulos sin exponer su posición.
+                        Sin embargo, su falta de un Bankai limita su verdadero potencial en combate contra enemigos de alto nivel.
+                    `,
+                galeria: JSON.stringify([
+                  "https://www.mundodeportivo.com/alfabeta/hero/2021/12/bleach-rangiku-matsumoto-cosplay.jpg?width=768&aspect_ratio=16:9&format=nowebp",
+                  "https://static.wikia.nocookie.net/bleach/images/d/d1/Ep24RangikuArrives.png/revision/latest?cb=20210331032855&path-prefix=en",
+                  "https://static.wikia.nocookie.net/bleach/images/b/b6/-16Rangiku_profile.png/revision/latest/scale-to-width/360?cb=20220625045948&path-prefix=en",
+                  "https://preview.redd.it/how-strong-could-rangiku-have-been-v0-3bpnw7qaodmb1.jpg?width=640&crop=smart&auto=webp&s=b34e652eb0538a049e2a7e0c584ed18a170c9b38"
+                ]),
+                historia: `
+                        Rangiku Matsumoto tuvo una infancia difícil, creciendo en la pobreza junto a Gin Ichimaru, quien se convirtió en su mejor amigo y protector.
+                        Más tarde, se unió al Gotei 13 y ascendió al rango de teniente bajo el mando de Tōshirō Hitsugaya. A lo largo de la serie, ha demostrado ser una guerrera leal y fuerte, 
+                        aunque su actitud relajada y su amor por la bebida la hacen parecer menos seria de lo que realmente es.
+                        Su relación con Gin Ichimaru es uno de los aspectos más importantes de su historia, ya que su muerte la afectó profundamente y la motivó a volverse aún más fuerte.
+                    `,
+                personalidad: `
+                        Rangiku es extrovertida, coqueta y relajada, con una actitud despreocupada hacia la vida. Sin embargo, bajo su apariencia juguetona se esconde una mujer con un gran sentido de la responsabilidad y una profunda tristeza.
+                        Es leal a sus amigos y compañeros, y aunque a veces se muestra perezosa, cuando la situación lo requiere, demuestra ser una guerrera formidable y decidida.
+                    `,
+                batallas: "Rangiku vs Nakeem[Ganador], Rangiku vs Luppi[Perdedor], Rangiku vs Bazz-B[Perdedor]",
+              },
+
+              {
+                nombre: "Ikkaku Madarame",
+                raza: "Shinigami",
+                cumpleaños: "9 de noviembre",
+                altura: "1.82 m",
+                peso: "76 kg",
+                afiliacion: "Gotei 13, 11ª División",
+                ocupacion: "Tercer Oficial de la 11ª División",
+                shikai: "Hōzukimaru",
+                bankai: "Ryūmon Hōzukimaru",
+                poderes: `
+                        Ikkaku Madarame es un feroz combatiente de la 11ª División del Gotei 13, conocido por su amor por la batalla y su espíritu indomable.
+                        Su Zanpakutō, Hōzukimaru, tiene la capacidad de transformarse en un arma de tres secciones en su Shikai, permitiéndole atacar con gran alcance y potencia.
+                        Su Bankai, Ryūmon Hōzukimaru, aumenta enormemente su fuerza y resistencia, dándole un poder devastador en combate cuerpo a cuerpo.
+                        A pesar de su fuerza, Ikkaku evita revelar su Bankai, ya que prefiere permanecer en la 11ª División sin ascender de rango.
+                    `,
+                habilidades: `
+                        - Maestro en Zanjutsu: Ikkaku es un experto espadachín que prefiere el combate cuerpo a cuerpo y disfruta de las peleas prolongadas.
+                        - Shikai: Hōzukimaru: Se convierte en una naginata de tres secciones, lo que le permite atacar con flexibilidad y gran alcance.
+                        - Bankai: Ryūmon Hōzukimaru: Aumenta drásticamente su poder de ataque y resistencia, aunque necesita tiempo para alcanzar su máximo poder.
+                        - Gran resistencia y durabilidad: Puede seguir luchando incluso con heridas graves, demostrando una resistencia impresionante.
+                        - Espíritu de lucha indomable: Su amor por la batalla lo impulsa a seguir peleando sin importar las circunstancias.
+                    `,
+                nivel_de_poder: `
+                        Ikkaku es uno de los luchadores más fuertes de la 11ª División y posee un Bankai, lo que lo coloca por encima de la mayoría de los tenientes en términos de poder.
+                        Sin embargo, su Bankai tiene una gran desventaja: requiere tiempo para alcanzar su máximo potencial, lo que lo hace vulnerable en enfrentamientos rápidos.
+                        A pesar de esto, su habilidad con la espada y su resistencia lo convierten en un oponente formidable.
+                    `,
+                galeria: JSON.stringify([
+                  "https://static.wikia.nocookie.net/bleach/images/e/ed/237Ikkaku_profile.png/revision/latest?cb=20220906215055&path-prefix=en",
+                  "https://i.pinimg.com/564x/82/eb/94/82eb94a79ef64c2ac25485c7eb5cad21.jpg",
+                  "https://m.media-amazon.com/images/M/MV5BZGY2MzA0NTktMTg3ZC00ZjQ4LTgwODYtMWRlNjQ3NWJlODk4XkEyXkFqcGc@._V1_.jpg",
+                  "https://static.wikia.nocookie.net/bleach/images/8/84/Ikkaku_Bankai.jpg/revision/latest?cb=20090317004930&path-prefix=es"
+                ]),
+                historia: `
+                        Ikkaku Madarame nació en el Rukongai y siempre ha sido un apasionado de la lucha. Fue derrotado por Zaraki Kenpachi en el pasado, lo que lo llevó a unirse a la 11ª División para seguir su filosofía de combate.
+                        Se convirtió en el tercer oficial de la división y desarrolló una gran amistad con Yumichika Ayasegawa. A lo largo de la serie, ha demostrado su valentía en múltiples batallas y su lealtad a Kenpachi.
+                        A pesar de poseer un Bankai, se niega a ascender de rango porque quiere seguir luchando bajo el mando de Kenpachi.
+                    `,
+                personalidad: `
+                        Ikkaku es un guerrero apasionado que vive para la batalla. Es valiente, leal y tiene un gran sentido del honor. Aunque a veces es impulsivo y competitivo, su determinación lo hace un luchador formidable.
+                        Es muy orgulloso y evita mostrar su Bankai, ya que teme que lo obliguen a ascender y perder su lugar en la 11ª División.
+                    `,
+                batallas: "Ikkaku vs Ichigo[Perdedor], Ikkaku vs Edorad[Ganador], Ikkaku vs Poww[Ganador], Ikkaku vs Bambietta[Perdedor]",
+              },
+
+              {
+                nombre: "Yachiru Kusajishi",
+                raza: "Shinigami",
+                cumpleaños: "12 de febrero",
+                altura: "1.09 m",
+                peso: "15.5 kg",
+                afiliacion: "Gotei 13, 11ª División",
+                ocupacion: "Teniente de la 11ª División",
+                shikai: "Sanpo Kenjū",
+                bankai: "Desconocido",
+                poderes: `
+                        Yachiru Kusajishi es la teniente de la 11ª División del Gotei 13 y la mano derecha de Kenpachi Zaraki. 
+                        A pesar de su apariencia infantil y personalidad juguetona, es increíblemente fuerte y posee una velocidad y agilidad impresionantes.
+                        Su Zanpakutō, Sanpo Kenjū, invoca dos criaturas espirituales que atacan simultáneamente desde diferentes ángulos, haciendo que sus ataques sean difíciles de esquivar.
+                        Su fuerza espiritual es inmensa, lo que le permite moverse a gran velocidad y golpear con una potencia sorprendente.
+                    `,
+                habilidades: `
+                        - Velocidad y agilidad sobrehumanas: Yachiru puede moverse a una velocidad increíble, lo que la hace difícil de alcanzar en combate.
+                        - Shikai: Sanpo Kenjū: Invoca dos criaturas espirituales que atacan desde diferentes direcciones, asegurando que su enemigo sea golpeado sin importar cómo se defienda.
+                        - Instintos de combate naturales: Aunque rara vez pelea en serio, tiene un sentido del combate innato y puede derrotar enemigos con facilidad.
+                        - Gran resistencia: Puede recibir golpes y continuar luchando sin mostrar signos de fatiga o dolor.
+                        - Percepción espiritual avanzada: Puede detectar la presencia de enemigos con facilidad y rastrear a personas con gran precisión.
+                    `,
+                nivel_de_poder: `
+                        Aunque no se muestra en muchas batallas, Yachiru posee un nivel de poder sorprendentemente alto para su apariencia. 
+                        Su velocidad, fuerza y habilidades de combate la hacen una oponente formidable. 
+                        Su Zanpakutō es única y extremadamente efectiva, permitiéndole atacar sin que el enemigo pueda reaccionar a tiempo.
+                    `,
+                galeria: JSON.stringify([
+                  "https://preview.redd.it/hafphjihe3fd1.jpeg?auto=webp&s=864f65634d10c2d8d108e933f1c36959daa8a894",
+                  "https://i.pinimg.com/564x/ec/45/8a/ec458ae6639b9442efb757be0c323a5a.jpg",
+                  "https://i.namu.wiki/i/7efE0qziDiWJ3KOlMbBRUn4HTCUed7zQpMwBt16o6mgZ9CXT8sZ_MIxM41brC-uou08BbC-IpPpi9Hei_0xlAQ.webp",
+                  "https://static.wikia.nocookie.net/five-world-war/images/2/25/Yachiru.png/revision/latest?cb=20210518212116"
+                ]),
+                historia: `
+                        Yachiru fue encontrada por Kenpachi Zaraki en el distrito 79 del Rukongai, un lugar peligroso y sin ley. A pesar de su corta edad, no mostró miedo y se encariñó con Kenpachi de inmediato.
+                        Él la adoptó y le dio el nombre "Yachiru" en honor a una persona importante en su vida. Desde entonces, se convirtió en su fiel compañera y teniente de la 11ª División.
+                        A lo largo de la serie, se la ve montada en los hombros de Kenpachi, animándolo en combate y burlándose de sus enemigos.
+                        Sin embargo, en la Guerra contra los Quincy, su verdadera naturaleza se vuelve un misterio cuando desaparece después de que Kenpachi desbloquea su Bankai.
+                    `,
+                personalidad: `
+                        Yachiru es juguetona, traviesa y siempre está de buen humor. Le encanta hacer bromas y molestar a otros, pero tiene un vínculo inquebrantable con Kenpachi.
+                        A pesar de su actitud infantil, es increíblemente perceptiva y muestra una gran lealtad a la 11ª División. También tiene un lado aterrador cuando se enoja, especialmente si alguien insulta a Kenpachi.
+                    `,
+                batallas: "Yachiru vs Gremmy[Perdedora]",
+              },
+                
+                  {
+                    nombre: "Grimmjow Jaegerjaquez",
+                    raza: "Hollow",
+                    cumpleaños: "31 de julio",
+                    altura: "1.86 m",
+                    peso: "80 kg",
+                    afiliacion: "Ejército de Sōsuke Aizen, Espada #6",
+                    ocupacion: "Espada",
+                    shikai: "No tiene",
+                bankai: "No tiene",
+                    poderes: `
+                            Grimmjow Jaegerjaquez es el Sexto Espada en el ejército de Sōsuke Aizen. Es un combatiente feroz con una personalidad salvaje y sed de batalla.
+                            Su poder proviene de su Zanpakutō, Pantera, que le permite transformarse en una bestia felina, aumentando su velocidad, fuerza y reflejos.
+                            Posee una regeneración acelerada y puede disparar potentes Cero desde sus manos y boca.
+                            Su Gran Rey Cero es una versión mucho más poderosa del Cero común, capaz de devastar grandes áreas con facilidad.
+                        `,
+                    habilidades: `
+                            - Cero: Dispara potentes ráfagas de energía espiritual desde sus manos o boca.
+                            - Gran Rey Cero: Una versión mejorada del Cero que solo los Espada pueden usar, con una potencia devastadora.
+                            - Sonído: Su velocidad es impresionante, permitiéndole moverse más rápido que la mayoría de sus oponentes.
+                            - Hierro (Hierro): Su piel es extremadamente dura, lo que le permite resistir ataques poderosos sin sufrir mucho daño.
+                            - Zarpazos de Desgarrón: En su forma resurrección, puede lanzar cortes de energía desde sus garras con gran velocidad y precisión.
+                            - Regeneración acelerada: Puede curar heridas a gran velocidad, aunque no puede regenerar órganos perdidos.
+                        `,
+                    nivel_de_poder: `
+                            Grimmjow es un Espada de nivel extremadamente alto, considerado uno de los más fuertes debido a su agresividad y talento en combate.
+                            Su velocidad y fuerza física lo hacen un oponente formidable incluso para los Shinigami más poderosos.
+                            En su forma resurrección, su poder se multiplica, permitiéndole enfrentarse a Ichigo Kurosaki en su estado más avanzado.
+                        `,
+                    galeria: JSON.stringify([
+                      "https://static.wikia.nocookie.net/bleach/images/4/4c/Ep398GrimmjowProfile.png/revision/latest?cb=20241110032104&path-prefix=en",
+                      "https://preview.redd.it/b8g8rrm6ew8a1.jpg?auto=webp&s=f9e0bce6463657dcfcb8e1fe3a729fa5e3675601",
+                      "https://static.wikia.nocookie.net/bleachwiki/images/6/63/Grimmjow_TYBW.jpg/revision/latest?cb=20230417194421&path-prefix=de",
+                      "https://i.pinimg.com/736x/e2/9e/de/e29edea26c4998aa163a8119b60d50bc.jpg"
+                    ]),
+                    historia: `
+                            Grimmjow era originalmente un Adjucha, líder de un grupo de Hollows que buscaban evolucionar. Tras devorar a muchos de sus compañeros, se convirtió en un Arrancar y fue reclutado por Aizen.
+                            Como Sexto Espada, se enfrentó a Ichigo en varias ocasiones, desarrollando una rivalidad intensa con él.
+                            Tras la caída de Aizen, Grimmjow sobrevivió y más tarde reaparece en la Guerra contra los Quincy, aliándose con Ichigo temporalmente para derrotar a un enemigo en común.
+                        `,
+                    personalidad: `
+                            Grimmjow es arrogante, violento y disfruta de la batalla más que cualquier otra cosa. Tiene un fuerte sentido del orgullo y no tolera ser menospreciado.
+                            Aunque es despiadado, respeta a los oponentes que luchan con valentía, especialmente Ichigo, con quien desarrolla una relación de rivalidad y respeto mutuo.
+                        `,
+                    batallas: "Grimmjow vs Ichigo Kurosaki [Perdedor], Grimmjow vs Ulquiorra Cifer [Interrumpida], Grimmjow vs Askin Nakk Le Vaar [Ganador]",
+                  },
+
+                  {
+                    "nombre": "Ulquiorra Cifer",
+                    "raza": "Hollow",
+                    "cumpleaños": "31 de octubre",
+                    "altura": "1.69 m",
+                    "peso": "55 kg",
+                    "afiliacion": "Espada, Hueco Mundo",
+                    "ocupacion": "Espada",
+                    "shikai": "No tiene",
+                    "bankai": "No tiene",
+                    "poderes": `
+                      Ulquiorra Cifer es uno de los más poderosos de los Espada, la élite de los Arrancar. 
+                      Su habilidad principal es el uso del "Cero", una poderosa técnica de energía espiritual que puede destruir a sus enemigos en un solo disparo. 
+                      Además, su habilidad "Segunda Etapa" le permite transformarse en una forma más poderosa, en la que su velocidad y fuerza aumentan considerablemente.
+                      Ulquiorra también tiene la capacidad de volar y una gran resistencia a los ataques físicos y espirituales. 
+                      Es un luchador extremadamente calculador, que prefiere analizar la situación antes de actuar.
+                    `,
+                    "habilidades": `
+                      - Cero: Ulquiorra es capaz de liberar un Cero, una poderosa onda de energía espiritual que puede causar una destrucción masiva.
+                      - Segunda Etapa: En su transformación, Ulquiorra alcanza un nivel de poder mucho mayor, con una mejora significativa en su velocidad y fuerza.
+                      - Regeneración: Como Arrancar, Ulquiorra puede regenerar rápidamente sus heridas, lo que lo hace un oponente difícil de derrotar.
+                      - Vuelo: Ulquiorra puede volar a gran velocidad, lo que le da una ventaja táctica en combate.
+                    `,
+                    "nivel_de_poder": `
+                      Ulquiorra Cifer es uno de los personajes más poderosos de la serie. Como Espada, ocupa el cuarto lugar en la jerarquía de los Arrancar, lo que demuestra su gran habilidad. 
+                      Su Cero es una de las técnicas más destructivas, y su Segunda Etapa lo convierte en un combatiente casi invencible. 
+                      Ulquiorra es capaz de enfrentarse a los Shinigami más fuertes y tiene una gran resistencia tanto física como espiritual. 
+                      Su capacidad para analizar y adaptar su estrategia lo hace aún más peligroso en combate.
+                    `,
+                    "galeria": JSON.stringify([
+                      "https://static.wikia.nocookie.net/bleach/images/3/36/Ulquiorra_Vizard.png/revision/latest?cb=20180421225651",
+                      "https://i.pinimg.com/originals/4f/22/9f/4f229f9ff5bdb6a6a2c6c735b2689a4e.jpg",
+                      "https://preview.redd.it/0g2zv7k6xz021.jpg?width=960&crop=smart&auto=webp&s=2be1c87e5c5ff9f67839d8d61ab8b8b5a5c07033",
+                      "https://vignette.wikia.nocookie.net/bleach/images/2/2e/Ulquiorra_Cifer_Anime.png/revision/latest/scale-to-width-down/350?cb=20200119163152"
+                    ]),
+                    "historia": `
+                      Ulquiorra Cifer es uno de los personajes más enigmáticos de la serie. Originalmente un Hollow, fue convertido en Arrancar por Aizen, quien lo colocó como uno de los Espada más poderosos. 
+                      A lo largo de la serie, Ulquiorra demuestra una actitud fría y distante, sin mostrar emociones humanas. 
+                      Su misión principal es capturar a Ichigo Kurosaki y traerlo a Hueco Mundo, pero a medida que avanza la historia, Ulquiorra se encuentra con Ichigo y sus amigos, desafiando su perspectiva sobre los seres humanos y los Hollows.
+                    `,
+                    "personalidad": `
+                      Ulquiorra es conocido por su frialdad y su falta de emociones, lo que lo convierte en un personaje misterioso y calculador. 
+                      Aunque parece indiferente a la vida y la muerte, su encuentro con Ichigo y los demás Shinigami lo hace cuestionar sus propias creencias. 
+                      A pesar de su lealtad a Aizen y su misión como Espada, Ulquiorra empieza a mostrar una pequeña vulnerabilidad, especialmente cuando se enfrenta a Ichigo en su lucha final.
+                    `,
+                    "batallas": "Ulquiorra vs Ichigo[Perdedor]"
+                  },
+                  {
+                    "nombre": "Baraggan Louisenbairn",
+                    "raza": "Hollow",
+                    "cumpleaños": "9 de Febrero",
+                    "altura": "2.10 m",
+                    "peso": "95 kg",
+                    "afiliacion": "Espada, Hueco Mundo",
+                    "ocupacion": "Espada",
+                    "shikai": "No tiene",
+                    "bankai": "No tiene",
+                    "poderes": `
+                      Baraggan Louisenbairn es uno de los Espada más poderosos. Su habilidad principal es su control sobre la muerte. 
+                      Su zanpakutō, "La Muerte", tiene el poder de controlar el envejecimiento y la decadencia. 
+                      Cualquier cosa que entre en su área de influencia comienza a envejecer rápidamente hasta morir. 
+                      Este poder lo hace extremadamente peligroso, ya que puede desintegrar a sus enemigos con solo tocarlos. 
+                      Además, Baraggan tiene una gran resistencia y es un combatiente formidable, capaz de enfrentarse a los enemigos más poderosos.
+                    `,
+                    "habilidades": `
+                      - La Muerte: Su zanpakutō permite que cualquier cosa que entre en su campo de visión envejezca rápidamente y muera.
+                      - Regeneración: Baraggan puede regenerar sus heridas rápidamente, lo que lo hace un oponente difícil de derrotar.
+                      - Control del tiempo: Baraggan tiene una habilidad que le permite manipular el tiempo a su favor, ralentizando o acelerando su propio tiempo.
+                      - Fuerza sobrehumana: Como uno de los Espada, Baraggan posee una fuerza física extremadamente alta, lo que lo convierte en un combatiente letal en combate cercano.
+                    `,
+                    "nivel_de_poder": `
+                      Baraggan Louisenbairn es uno de los Espada más poderosos, con un control absoluto sobre el envejecimiento y la muerte. 
+                      Su habilidad con "La Muerte" le otorga un poder destructivo casi inigualable, ya que puede desintegrar a sus enemigos a una velocidad impresionante. 
+                      A pesar de su edad, Baraggan posee una gran resistencia y una fuerza física sobrehumana. 
+                      Su capacidad para manipular el tiempo y su resistencia lo convierten en un oponente extremadamente peligroso para cualquiera que se cruce en su camino.
+                    `,
+                    "galeria": JSON.stringify([
+                      "https://vignette.wikia.nocookie.net/bleach/images/1/1f/BaragganLouisenbairn.png/revision/latest?cb=20190126193024",
+                      "https://i.pinimg.com/originals/d4/cf/5f/d4cf5f6d8c0e678b3a4d717ef53b6b6b.jpg",
+                      "https://preview.redd.it/mt1nrspph7s41.jpg?width=960&crop=smart&auto=webp&s=5f1a5b9b88b78a4c8e4b5eebac55c1bc0ffb56f3",
+                      "https://static.wikia.nocookie.net/bleach/images/0/0d/Baraggan_Anime_Render.png/revision/latest?cb=20201021182443"
+                    ]),
+                    "historia": `
+                      Baraggan Louisenbairn fue uno de los primeros Arrancar creados por Aizen y uno de los Espada más poderosos de Hueco Mundo. 
+                      Su habilidad para controlar el envejecimiento lo convirtió en una figura temida y respetada en el mundo de los Hollows. 
+                      A lo largo de la serie, Baraggan demuestra ser un ser extremadamente orgulloso, que desprecia a los demás y valora su poder por encima de todo. 
+                      Aunque fue derrotado por uno de los protagonistas, su poder y su legado como Espada siguen siendo recordados como uno de los más grandes.
+                    `,
+                    "personalidad": `
+                      Baraggan es un ser extremadamente orgulloso y arrogante, que se considera superior a los demás. 
+                      Tiene un profundo desprecio por los débiles y se ve a sí mismo como una figura casi divina. 
+                      Su actitud de superioridad lo hace un personaje difícil de tratar, ya que no duda en mostrar su desprecio por aquellos que considera inferiores. 
+                      A pesar de su arrogancia, Baraggan es extremadamente inteligente y calculador, lo que lo convierte en un oponente formidable en combate.
+                    `,
+                    "batallas": "Baraggan vs Soi Fon[Perdedor]"
+                  },
+                  
+                  {
+                    "nombre": "Coyote Starrk",
+                    "raza": "Espada",
+                    "cumpleaños": "19 de enero",
+                    "altura": "1.87 m",
+                    "peso": "77 kg",
+                    "afiliacion": "Espada, Hueco Mundo",
+                    "ocupacion": "Espada",
+                    "shikai": "No tiene",
+                    "bankai": "No tiene",
+                    "poderes": `
+                      Coyote Starrk es uno de los Espada más poderosos de Hueco Mundo, conocido por su habilidad para controlar y crear lobos espirituales. 
+                      Su zanpakutō, "Los Lobos", le permite invocar a poderosos lobos espirituales que luchan a su lado y le otorgan una gran ventaja en combate. 
+                      Starrk también tiene una habilidad única de dividir su alma en múltiples fragmentos, lo que le permite tener una resistencia y poder de combate mucho mayores. 
+                      Además, su habilidad para liberar su energía a gran escala lo convierte en un oponente extremadamente peligroso.
+                    `,
+                    "habilidades": `
+                      - Los Lobos: Su zanpakutō le permite invocar lobos espirituales que luchan a su lado y le proporcionan un poder significativo en combate.
+                      - Divisiones de alma: Starrk puede dividir su alma en fragmentos, lo que le permite multiplicar su poder y resistencia.
+                      - Fuerza sobrehumana: Como uno de los Espada, Starrk posee una gran fuerza física y una increíble resistencia en combate.
+                      - Regeneración: Al igual que otros Espada, Coyote Starrk tiene una habilidad de regeneración avanzada que le permite recuperarse rápidamente de las heridas.
+                    `,
+                    "nivel_de_poder": `
+                      Coyote Starrk es uno de los Espada más poderosos, capaz de invocar lobos espirituales y dividir su alma en múltiples fragmentos. 
+                      Su poder destructivo es tremendo, y su habilidad para generar una gran cantidad de energía lo convierte en un combatiente extremadamente formidable. 
+                      Su resistencia y fuerza son de nivel sobrehumano, lo que le permite enfrentarse a los más poderosos de los Shinigami y otros enemigos. 
+                      A pesar de su personalidad relajada, Starrk es un combatiente letal cuando se enfrenta a la adversidad.
+                    `,
+                    "galeria": JSON.stringify([
+                      "https://static.wikia.nocookie.net/bleach/images/a/a9/Coyote_Starrk.png/revision/latest?cb=20180409183950",
+                      "https://vignette.wikia.nocookie.net/bleach/images/e/e1/Coyote_Starrk_Anime_Render.png/revision/latest?cb=20170622095133",
+                      "https://i.pinimg.com/originals/97/38/cc/9738ccf7b4b4b3d1154f6a1951f89e85.jpg",
+                      "https://static.wikia.nocookie.net/bleach/images/e/ea/Coyote_Starrk_1.png/revision/latest?cb=20190906030145"
+                    ]),
+                    "historia": `
+                      Coyote Starrk es el primer Espada y uno de los más poderosos en Hueco Mundo. 
+                      A pesar de su increíble poder, Starrk tiene una personalidad relajada y tranquila, prefiriendo evitar la lucha cuando es posible. 
+                      Se convierte en un personaje clave durante la invasión de los Shinigami a Hueco Mundo, donde se enfrenta a varios de los principales personajes de la serie. 
+                      A lo largo de su historia, Starrk demuestra ser un líder que prefiere evitar conflictos innecesarios, pero no duda en luchar cuando es necesario.
+                    `,
+                    "personalidad": `
+                      Coyote Starrk es un personaje relajado y tranquilo, que prefiere evitar conflictos y mantener una actitud despreocupada. 
+                      Aunque tiene un poder inmenso, no le gusta la lucha constante y prefiere disfrutar de su tiempo. 
+                      A pesar de su aparente desinterés, Starrk es un ser muy leal y valiente cuando se trata de proteger a sus compañeros o enfrentarse a una amenaza. 
+                      Su personalidad calmada y su gran poder lo hacen un personaje interesante y único dentro de los Espada.
+                    `,
+                    "batallas": "Starrk vs Shunsui[Perdedor], Starrk vs Ukitake[Empate]"
+                  },
+
+                  {
+                    "nombre": "Tia Harribel",
+                    "raza": "Hollow ",
+                    "cumpleaños": "25 de Julio",
+                    "altura": "1.75 m",
+                    "peso": "61 kg",
+                    "afiliacion": "Espada, Hueco Mundo",
+                    "ocupacion": "Espada",
+                    "shikai": "Ninguno",
+                    "bankai": "Ninguno",
+                    "poderes": `
+                      Tia Harribel es una de las Espada más poderosas de Hueco Mundo. Su habilidad principal radica en su control sobre el agua y su capacidad para manipularla en combate. 
+                      Su zanpakutō, "Tiburon", le permite crear y controlar agua en forma de ataques de alta presión, además de utilizarla para defenderse y crear barreras. 
+                      A pesar de su poder, Harribel es conocida por su personalidad tranquila y su fuerte sentido del honor. 
+                      Su habilidad en combate es tan formidable que incluso los Shinigami más poderosos tienen dificultades para enfrentarse a ella.
+                    `,
+                    "habilidades": `
+                      - Control del agua: Su zanpakutō, "Tiburon", le permite manipular el agua en diversas formas, creando ataques de alta presión y poderosas barreras defensivas.
+                      - Fuerza física: Como Espada, Harribel posee una gran fuerza física, siendo capaz de enfrentarse a enemigos poderosos sin esfuerzo.
+                      - Regeneración: Al igual que otros Hollows, Tia Harribel tiene una regeneración avanzada que le permite sanar rápidamente durante el combate.
+                      - Sentido del honor: A pesar de ser un Hollow, Harribel posee un fuerte sentido del honor y es conocida por su actitud justa y equilibrada.
+                    `,
+                    "nivel_de_poder": `
+                      Tia Harribel es una de las Espada más poderosas, con un dominio impresionante sobre el agua y una gran resistencia en combate. 
+                      Su habilidad para manipular el agua la convierte en un adversario extremadamente peligroso, capaz de realizar ataques de gran alcance y precisión. 
+                      Su fuerza física y regeneración avanzada también le otorgan una ventaja significativa en combate, lo que la convierte en una de las Espada más formidables.
+                    `,
+                    "galeria": JSON.stringify([
+                      "https://static.wikia.nocookie.net/bleach/images/c/c7/Tia_Harribel_Render.png/revision/latest?cb=20180205151045",
+                      "https://vignette.wikia.nocookie.net/bleach/images/2/29/Tia_Harribel.png/revision/latest?cb=20180410005355",
+                      "https://i.pinimg.com/originals/c1/ef/7a/c1ef7a9d87a4b7b8e1c2e85e4d9a1f4f.jpg",
+                      "https://static.wikia.nocookie.net/bleach/images/4/4f/Tia_Harribel_2.png/revision/latest?cb=20180410010722"
+                    ]),
+                    "historia": `
+                      Tia Harribel es una de las Espada más poderosas de Hueco Mundo, y se caracteriza por su actitud tranquila y su fuerte sentido del honor. 
+                      A pesar de ser una Hollow, Harribel tiene un gran respeto por la vida y se muestra como una líder justa. 
+                      Durante la invasión de los Shinigami a Hueco Mundo, Harribel juega un papel importante, enfrentándose a varios de los principales personajes de la serie. 
+                      Su historia está marcada por su lucha por el poder y la supervivencia, pero también por su deseo de mantener la paz y el orden en Hueco Mundo.
+                    `,
+                    "personalidad": `
+                      Tia Harribel es una persona tranquila y calculadora, con un fuerte sentido del honor y la justicia. 
+                      Aunque es una Hollow, su personalidad es bastante diferente a la de otros miembros de la Espada, ya que se preocupa por sus subordinados y se muestra respetuosa con sus enemigos. 
+                      Su actitud calmada y su sabiduría le permiten tomar decisiones justas en situaciones difíciles, y siempre actúa con una gran dignidad y honor.
+                    `,
+                    "batallas": "Harribel vs Hitsugaya[Perdedora]"
+                  },
+                    {
+                      "nombre": "Jugram Haschwalth",
+                      "raza": "Quincy",
+                      "cumpleaños": "5 de Noviembre",
+                      "altura": "1.89 m",
+                      "peso": "74 kg",
+                      "afiliacion": "Quincy, Wandenreich",
+                      "ocupacion": "Comandante de la Fuerza de Asalto de la Wandenreich",
+                      "shikai": "Ninguno",
+                      "bankai": "Ninguno",
+                      "poderes": `
+                        Jugram Haschwalth es uno de los más poderosos Quincy y el segundo al mando en el ejército de los Quincy, la Wandenreich. 
+                        Su poder más destacado es su habilidad para manipular la "Balance", que le permite controlar la suerte y la fortuna. 
+                        Esta habilidad le da una ventaja significativa en combate, ya que puede transferir la suerte entre él y su oponente, 
+                        lo que lo hace extremadamente peligroso. Además, su habilidad le permite también absorber la energía espiritual de sus enemigos para fortalecer su propio poder.
+                      `,
+                      "habilidades": `
+                        - Balance: La habilidad principal de Jugram es "Balance", que le permite transferir la suerte entre él y su oponente. 
+                          Esto le da una ventaja estratégica, ya que puede hacer que su enemigo sufra mala suerte, mientras que él mismo se beneficia de la buena suerte.
+                        - Manipulación de Reishi: Como Quincy, Jugram puede manipular el Reishi para crear diversas armas y ataques, 
+                          y también para fortalecer su propio cuerpo o crear barreras defensivas.
+                        - Fuerza física: Aunque no es tan conocido por su fuerza física como otros personajes, Jugram es un combatiente extremadamente hábil y resistente.
+                      `,
+                      "nivel_de_poder": `
+                        Jugram Haschwalth es un combatiente excepcionalmente fuerte, con una habilidad única que le da una ventaja significativa en combate. 
+                        Su poder de "Balance" le permite manipular las probabilidades a su favor, lo que lo convierte en un adversario muy difícil de vencer. 
+                        Además, su habilidad para manipular el Reishi y su entrenamiento como Quincy le otorgan una gran capacidad ofensiva y defensiva. 
+                        A lo largo de la serie, Jugram demuestra ser uno de los personajes más poderosos, enfrentándose a varios de los personajes más fuertes de la serie.
+                      `,
+                      "galeria": JSON.stringify([
+                        "https://i.pinimg.com/736x/c6/f7/74/c6f7745f164e0d43a9e45c3e90ed4ea0.jpg",
+                        "https://static.wikia.nocookie.net/bleach/images/6/68/Jugram_ve_a_Zaraki_%28anime%29.png/revision/latest/scale-to-width-down/1280?cb=20230121021349&path-prefix=es",
+                        "https://i.pinimg.com/736x/f0/a7/ff/f0a7fff37aaf6afdcd6886d4103d1c65.jpg",
+                        "https://i.pinimg.com/736x/07/75/a8/0775a844061a406ad4977206ef3fd242.jpg"
+                      ]),
+                      "historia": `
+                        Jugram Haschwalth es uno de los líderes más poderosos de la Wandenreich, la organización de los Quincy liderada por Yhwach. 
+                        Es el compañero cercano y más leal de Yhwach, desempeñando un papel crucial en la invasión de los Shinigami. 
+                        Haschwalth tiene una fuerte conexión con su líder, pero a lo largo de la serie se revelan sus propios conflictos internos y su lucha por la lealtad y el poder. 
+                        A pesar de su apariencia fría y calculadora, Jugram es un personaje profundamente complejo, con una visión única del mundo y la guerra.
+                      `,
+                      "personalidad": `
+                        Jugram Haschwalth es un personaje serio, calculador y extremadamente leal a Yhwach. 
+                        A pesar de su naturaleza fría, tiene una fuerte moralidad y una visión personal del destino y el orden. 
+                        Es un estratega brillante y un combatiente excepcionalmente habilidoso, pero también se enfrenta a dilemas internos sobre el futuro de los Quincy y la guerra. 
+                        Su lealtad a Yhwach es inquebrantable, aunque a veces se muestra conflictivo respecto a sus propios deseos y su deber.
+                      `,
+                      "batallas": "Haschwalth vs Uryū Ishida[Empate]"
+                    },
+
+                    {
+                      "nombre": "Gerard Valkyrie",
+                      "raza": "Quincy",
+                      "cumpleaños": "No especificado",
+                      "altura": "2.22 m",
+                      "peso": "No especificado",
+                      "afiliacion": "Wandenreich",
+                      "ocupacion": "Soldado de la Wandenreich, Fuerza de Asalto",
+                      "shikai": "Ninguno",
+                      "bankai": "Ninguno",
+                      "poderes": `
+                        Gerard Valkyrie es uno de los Quincy más poderosos de la Wandenreich y uno de los miembros de los "Vandenreich Sternritter". 
+                        Su habilidad más destacada es su poder conocido como "The Miracle", que le permite manipular su propio destino, 
+                        transformando cualquier daño que reciba en un aumento de su propio poder. 
+                        Cuanto más herido está, más fuerte se vuelve, lo que lo convierte en un enemigo muy difícil de derrotar. 
+                        Además, su enorme tamaño y fuerza física lo convierten en una amenaza formidable en combate.
+                      `,
+                      "habilidades": `
+                        - The Miracle: Esta habilidad le permite a Gerard Valkyrie manipular su destino, convirtiendo cualquier herida o daño que reciba en un aumento de su propio poder. 
+                          Cuanto más daño sufra, más fuerte se vuelve, lo que lo hace extremadamente resistente y difícil de derrotar.
+                        - Fuerza física sobrehumana: Gerard posee una fuerza física increíblemente alta, lo que le permite usar su cuerpo como un arma en combate cuerpo a cuerpo.
+                        - Reishi Manipulation: Como Quincy, Gerard tiene la capacidad de manipular el Reishi, lo que le permite crear armas y barreras de energía, 
+                          además de potenciar sus ataques a través de esta habilidad.
+                      `,
+                      "nivel_de_poder": `
+                        Gerard Valkyrie es un combatiente extremadamente fuerte. Su habilidad "The Miracle" lo hace casi invencible, ya que se vuelve más poderoso con cada golpe que recibe. 
+                        Además, su gran tamaño y fuerza física le otorgan una ventaja en combate cuerpo a cuerpo, y su capacidad para manipular el Reishi lo convierte en un enemigo aún más peligroso. 
+                        A lo largo de la serie, demuestra ser uno de los Quincy más poderosos, capaz de enfrentarse a varios Shinigami y otras amenazas con facilidad.
+                      `,
+                      "galeria": JSON.stringify([
+                        "https://static.wikia.nocookie.net/bleach/images/4/4b/Ep396GerardProfile.png/revision/latest?cb=20241030014829&path-prefix=en9",
+                        "https://static.wikia.nocookie.net/character-stats-and-profiles/images/a/aa/Gerard_Valkyrie_Vollst%C3%A4ndig.png/revision/latest/scale-to-width-down/334?cb=20201010212114",
+                        "https://www.superherodb.com/pictures2/portraits/10/050/23339.jpg?v=1666385141",
+                        "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/07/bleach-gerard-valkyrie.jpg"
+                      ]),
+                      "historia": `
+                        Gerard Valkyrie es uno de los miembros más poderosos de la Wandenreich, y uno de los más leales a Yhwach. 
+                        Como parte de la Fuerza de Asalto, fue uno de los principales combatientes en la invasión de los Shinigami. 
+                        A lo largo de la serie, se muestra que Gerard tiene una fuerte creencia en la causa de la Wandenreich y en la misión de Yhwach, 
+                        y su habilidad "The Miracle" lo convierte en un combatiente casi invencible. 
+                        A pesar de su lealtad a Yhwach, su poder y su naturaleza despiadada lo convierten en uno de los enemigos más temidos en la serie.
+                      `,
+                      "personalidad": `
+                        Gerard Valkyrie es un personaje muy leal a Yhwach y a la causa de la Wandenreich. 
+                        A pesar de su naturaleza feroz y su brutalidad en combate, también tiene un sentido del honor y la devoción hacia su líder. 
+                        Su poder y su habilidad para manipular su destino lo hacen muy confiado en sus habilidades, y es un personaje que se considera invencible mientras esté en combate. 
+                        A lo largo de la serie, se muestra que su lealtad y su creencia en la causa de la Wandenreich son inquebrantables.
+                      `,
+                      "batallas": "Gerard Valkyrie vs Kenpachi Zaraki[Perdedor]"
+                    },
+                    {
+                      "nombre": "Lille Barro",
+                      "raza": "Quincy",
+                      "cumpleaños": "11 de Abril",
+                      "altura": "1.88 m",
+                      "peso": "No especificado",
+                      "afiliacion": "Wandenreich",
+                      "ocupacion": "Sternritter",
+                      "shikai": "Ninguno",
+                      "bankai": "Ninguno",
+                      "poderes": `
+                        Lille Barro es uno de los Sternritter más poderosos de la Wandenreich y uno de los principales subordinados de Yhwach. 
+                        Su habilidad, conocida como "The X-Axis", le permite disparar proyectiles extremadamente poderosos a través del aire, 
+                        con una precisión letal. Además, su habilidad le permite disparar a través de cualquier cosa, lo que lo hace casi imposible de evitar. 
+                        A lo largo de la serie, se muestra que Lille tiene un control impresionante sobre su habilidad y es capaz de enfrentarse a varios enemigos poderosos.
+                      `,
+                      "habilidades": `
+                        - The X-Axis: Esta habilidad le permite disparar proyectiles de energía a través del aire con una precisión increíble. 
+                          Puede disparar a través de cualquier cosa, incluso a través de objetos sólidos, lo que lo convierte en un enemigo extremadamente peligroso.
+                        - Precisión letal: Lille tiene una precisión sobresaliente en sus disparos, lo que le permite atacar a sus enemigos desde largas distancias con una efectividad letal.
+                        - Fuerza física: Aunque su habilidad principal es el uso de proyectiles, Lille también tiene una gran capacidad física, siendo capaz de enfrentarse en combate cuerpo a cuerpo cuando es necesario.
+                      `,
+                      "nivel_de_poder": `
+                        Lille Barro es un combatiente extremadamente fuerte, especialmente debido a su habilidad "The X-Axis". 
+                        Su capacidad para disparar proyectiles con precisión letal y atravesar cualquier objeto lo convierte en una amenaza formidable. 
+                        A lo largo de la serie, demuestra ser capaz de enfrentarse a los Shinigami más poderosos y poner a prueba a varios de los personajes principales de la serie. 
+                        Aunque su habilidad es su principal ventaja, su fuerza física también es considerable, lo que lo convierte en un combatiente completo.
+                      `,
+                      "galeria": JSON.stringify([
+                        "https://i.pinimg.com/236x/bc/94/73/bc94734e006e12f61328444cd422ba4f.jpg",
+                        "https://preview.redd.it/ec5spb68gda81.jpg?width=640&crop=smart&auto=webp&s=82402511ee844f298d6fbb18d842f9a1f4079782",
+                        "https://preview.redd.it/sosuke-aizen-without-kyoka-suigetsu-versus-lille-barro-v0-dewwyy1ruwk91.jpg?width=640&crop=smart&auto=webp&s=6a57dfc0d07158b03a078bf4154c513a582ed4ef",
+                        "https://preview.redd.it/4411r1jfrpyd1.jpeg?auto=webp&s=db0f7a851a50b2a9eced08fd244ed616d2374e68"
+                      ]),
+                      "historia": `
+                        Lille Barro es uno de los Sternritter más temidos de la Wandenreich. Sirve a Yhwach y participa activamente en la invasión de los Shinigami. 
+                        A lo largo de la serie, Lille demuestra ser un combatiente extremadamente habilidoso, capaz de enfrentarse a varios enemigos con su habilidad única "The X-Axis". 
+                        A pesar de su naturaleza fría y calculadora, su lealtad a Yhwach y la causa de la Wandenreich lo convierten en un aliado valioso para su líder. 
+                        A lo largo de la serie, se muestra que Lille tiene una gran destreza en combate a distancia, y su habilidad le permite aniquilar a sus enemigos con facilidad.
+                      `,
+                      "personalidad": `
+                        Lille Barro es un personaje calculador y meticuloso. Aunque es extremadamente leal a Yhwach, no tiene reparos en actuar de manera fría y despiadada hacia sus enemigos. 
+                        Su carácter se caracteriza por su calma y su enfoque preciso en el combate. A pesar de ser un Sternritter, no muestra mucha emoción, prefiriendo centrarse en cumplir su misión con la máxima eficiencia. 
+                        Su habilidad lo convierte en un combatiente distante, prefiriendo atacar desde lejos y con precisión, lo que le otorga una ventaja en combate.
+                      `,
+                      "batallas": "Lille Barro vs Shunsui Kyoraku[Perdedor], Lille Barro vs Izuru Kira[Perdedor]"
+                    },
+                    {
+                      "nombre": "Askin Nakk Le Vaar",
+                      "raza": "Quincy",
+                      "cumpleaños": "6 de Junio",
+                      "altura": "1.87 m",
+                      "peso": "No especificado",
+                      "afiliacion": "Wandenreich",
+                      "ocupacion": "Sternritter",
+                      "shikai": "Ninguno",
+                      "bankai": "Ninguno",
+                      "poderes": `
+                        Askin Nakk Le Vaar es uno de los Sternritter más astutos y peligrosos de la Wandenreich. Su habilidad, conocida como "The Deathdealing", 
+                        le permite manipular la cantidad de "muerte" que una persona recibe, controlando así su tasa de mortalidad. 
+                        Esta habilidad le permite reducir la tasa de mortalidad de sus enemigos, haciendo que se vuelvan casi invulnerables a sus ataques, 
+                        o aumentarla de manera extrema, volviéndolos extremadamente vulnerables. Además, Askin es extremadamente inteligente y tiene una gran capacidad para analizar y manipular situaciones de combate.
+                      `,
+                      "habilidades": `
+                        - The Deathdealing: La habilidad principal de Askin le permite controlar la cantidad de "muerte" que una persona recibe, 
+                          lo que le da la capacidad de manipular la tasa de mortalidad de sus enemigos. 
+                          Puede hacer que los enemigos se vuelvan extremadamente vulnerables o incluso curarse a sí mismo al manipular su propia tasa de mortalidad.
+                        - Estrategia y manipulación: Askin es un maestro de la manipulación y la estrategia. Es capaz de analizar rápidamente las situaciones de combate 
+                          y usar su habilidad de manera inteligente para obtener ventaja sobre sus oponentes.
+                        - Resistencia física: Aunque no es tan conocido por su fuerza bruta, Askin tiene una resistencia notable, pudiendo soportar ataques poderosos debido a su habilidad para manipular la muerte.
+                      `,
+                      "nivel_de_poder": `
+                        Askin Nakk Le Vaar es uno de los Sternritter más peligrosos debido a su habilidad "The Deathdealing", que le permite manipular la tasa de mortalidad de sus enemigos. 
+                        Esta habilidad le da una ventaja significativa en combate, ya que puede hacer que sus oponentes sean increíblemente vulnerables o resistentes, según lo desee. 
+                        A pesar de no tener una gran fuerza física en comparación con otros personajes, su habilidad lo convierte en un oponente extremadamente difícil de derrotar.
+                      `,
+                      "galeria": JSON.stringify([
+                        "https://i.redd.it/oglq1hntyevb1.jpeg",
+                        "https://static.wikia.nocookie.net/bleach/images/e/e6/BBSAskin.png/revision/latest?cb=20200808065138&path-prefix=en",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ_1y3e-Jv-xFeKcRNF1pPm1Zyp6loZXGQhw&s",
+                        "https://static.wikia.nocookie.net/mmotaku/images/b/b3/Askin.png/revision/latest?cb=20160418110526"
+                      ]),
+                      "historia": `
+                        Askin Nakk Le Vaar es uno de los Sternritter más poderosos de la Wandenreich. A lo largo de la serie, se demuestra que es extremadamente inteligente y calculador. 
+                        Su habilidad "The Deathdealing" lo convierte en un oponente formidable, ya que puede manipular la tasa de mortalidad de cualquier persona, 
+                        haciendo que se vuelvan increíblemente vulnerables o resistentes según su voluntad. A pesar de su apariencia relajada, Askin es un enemigo extremadamente peligroso 
+                        debido a su habilidad y su naturaleza astuta.
+                      `,
+                      "personalidad": `
+                        Askin Nakk Le Vaar es un personaje muy inteligente y calmado. A menudo se le ve con una actitud relajada y un tono sarcástico, pero su mente es extremadamente aguda. 
+                        Es un estratega nato y disfruta manipulando a sus enemigos y controlando las situaciones a su favor. A pesar de ser un Quincy leal a Yhwach, Askin tiene una personalidad algo excéntrica, 
+                        y a menudo se muestra como alguien que disfruta de los desafíos y de poner a prueba a los demás. Su habilidad lo convierte en un oponente difícil de leer y aún más difícil de derrotar.
+                      `,
+                      "batallas": "Askin Nakk Le Vaar vs Urahara Kisuke[Perdedor]"
+                    },
+
+                    {
+                      "nombre": "Pernida Parnkgjas",
+                      "raza": "Quincy",
+                      "cumpleaños": "No especificado",
+                      "altura": "1.50 m",
+                      "peso": "No especificado",
+                      "afiliacion": "Wandenreich",
+                      "ocupacion": "Sternritter",
+                      "shikai": "Ninguno",
+                      "bankai": "Ninguno",
+                      "poderes": `
+                        Pernida Parnkgjas es uno de los Sternritter más aterradores de la Wandenreich. Su habilidad, conocida como "The Compulsory", 
+                        le permite controlar y manipular el nervio de cualquier persona que entre en contacto con su mano. 
+                        Esta habilidad le otorga el poder de controlar el cuerpo de sus enemigos, provocando que se muevan según su voluntad, 
+                        o incluso provocando su muerte al controlar sus nervios de manera fatal. Además, su brazo tiene la capacidad de regenerarse rápidamente, 
+                        lo que lo hace muy difícil de derrotar.
+                      `,
+                      "habilidades": `
+                        - The Compulsory: La habilidad principal de Pernida le permite manipular los nervios de cualquier ser vivo que toque, 
+                          controlando su cuerpo o incluso causando su muerte al alterar sus nervios.
+                        - Regeneración: Su brazo, que tiene una conexión directa con su habilidad, puede regenerarse rápidamente, lo que lo hace difícil de derrotar.
+                        - Control mental: Pernida también tiene una habilidad de control mental sobre sus enemigos, controlando sus movimientos y reacciones.
+                      `,
+                      "nivel_de_poder": `
+                        Pernida Parnkgjas es uno de los Sternritter más poderosos debido a su habilidad "The Compulsory". 
+                        La capacidad de controlar el cuerpo de sus enemigos es extremadamente peligrosa, y su regeneración lo hace muy difícil de vencer. 
+                        Además, su poder para controlar los nervios de sus oponentes le otorga una ventaja significativa en combate, 
+                        ya que puede neutralizar a sus enemigos sin necesidad de un combate físico directo.
+                      `,
+                      "galeria": JSON.stringify([
+                        "https://static.wikia.nocookie.net/bleach/images/6/60/Pernida_Perfil_novo.PNG/revision/latest?cb=20231014010745&path-prefix=es",
+                        "https://static.wikia.nocookie.net/topstrongest/images/b/b5/Pernida12.png/revision/latest/thumbnail/width/360/height/360?cb=20210530112605",
+                        "https://i.imgur.com/1SY7gQE.jpg",
+                        "https://static.wikia.nocookie.net/bleach/images/4/4b/Pernida_Parnkgjas_descubierto_%28anime%29.png/revision/latest/scale-to-width-down/250?cb=20241206182243&path-prefix=es"
+                      ]),
+                      "historia": `
+                        Pernida Parnkgjas es uno de los Sternritter más temidos debido a su habilidad para controlar los nervios de sus enemigos. 
+                        A lo largo de la serie, se demuestra que es un oponente extremadamente peligroso, capaz de derrotar a sus enemigos sin necesidad de combate físico directo. 
+                        Su habilidad "The Compulsory" lo convierte en una amenaza mortal, ya que puede manipular a sus enemigos a su voluntad. 
+                        Aunque no tiene una gran presencia como otros personajes de la Wandenreich, su poder y habilidades lo hacen uno de los más peligrosos.
+                      `,
+                      "personalidad": `
+                        Pernida Parnkgjas es una figura inquietante, con una personalidad que refleja su naturaleza cruel y manipuladora. 
+                        A menudo se muestra calmado y calculador, disfrutando del sufrimiento de sus enemigos. 
+                        Su habilidad para controlar a los demás lo hace aún más aterrador, ya que no necesita hacer mucho para destruir a aquellos que se interponen en su camino. 
+                        Su presencia es ominosa, y su forma de pensar es fría y despiadada, lo que lo convierte en un enemigo aterrador.
+                      `,
+                      "batallas": "Pernida Parnkgjas vs Mayuri Kurotsuchi[Perdedor], Pernida Parnkgjas vs Urahara Kisuke[Perdedor]"
+                    },
+                    {
+                      "nombre": "Ishin Kurosaki",
+                      "raza": "Shinigami",
+                      "cumpleaños": "10 de Diciembre",
+                      "altura": "1.86 m",
+                      "peso": "80 kg",
+                      "afiliacion": "Gotei 13 (antiguo)",
+                      "ocupacion": "Ex-Capitán de la 10ª División, Médico",
+                      "shikai": "No especificado",
+                      "bankai": "No especificado",
+                      "poderes": `
+                        Ishin Kurosaki es un ex-Capitán de la 10ª División del Gotei 13. Su habilidad como Shinigami le permite manipular y controlar el Reiatsu 
+                        (energía espiritual) para realizar ataques poderosos. Aunque no se conocen todos los detalles de su Shikai o Bankai, su poder es considerable 
+                        y se muestra que es capaz de enfrentarse a enemigos fuertes. A lo largo de la serie, se revela que tiene una conexión especial con los eventos 
+                        que rodean la familia Kurosaki y el origen de Ichigo como Shinigami.
+                      `,
+                      "habilidades": `
+                        - Habilidad con la espada: Como antiguo Capitán de la 10ª División, Ishin tiene una gran habilidad en el combate con espada.
+                        - Reiatsu: Al ser un Shinigami, Ishin puede usar su Reiatsu para realizar ataques poderosos y defenderse de amenazas.
+                        - Regeneración: Como Shinigami, tiene una capacidad de regeneración mejorada, lo que le permite recuperarse rápidamente de heridas.
+                      `,
+                      "nivel_de_poder": `
+                        Ishin Kurosaki es un combatiente altamente capacitado, con un nivel de poder considerable debido a su rango como Capitán en el Gotei 13. 
+                        Aunque su poder es impresionante, no se muestra completamente en la serie, ya que se mantiene en un segundo plano debido a su retiro y su rol como médico. 
+                        Sin embargo, su habilidad como Shinigami y su capacidad de lucha lo convierten en un oponente formidable cuando es necesario.
+                      `,
+                      "galeria": JSON.stringify([
+                        "https://static.wikia.nocookie.net/bleach/images/7/70/535Isshin_profile.png/revision/latest/scale-to-width/360?cb=20220625083232&path-prefix=en",
+                        "https://static.wikia.nocookie.net/mangakaart/images/0/05/IsshinShinigami.jpg/revision/latest?cb=20131001190039&path-prefix=es",
+                        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/51158316-fd7e-48ca-b5fe-8542e9dfe357/dd9d7a8-dc29b71e-43f0-4c1a-adc9-f3f1adce9430.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUxMTU4MzE2LWZkN2UtNDhjYS1iNWZlLTg1NDJlOWRmZTM1N1wvZGQ5ZDdhOC1kYzI5YjcxZS00M2YwLTRjMWEtYWRjOS1mM2YxYWRjZTk0MzAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rFD3umN2PecCWRtoEjqV5vQwqdrpBtCIMOiJSMEEqFw",
+                        "https://i.pinimg.com/736x/e3/5e/4f/e35e4f2f2d538148eb3f97c4ae35542d.jpg"
+                      ]),
+                      "historia": `
+                        Ishin Kurosaki es el padre de Ichigo Kurosaki y un ex-Capitán de la 10ª División del Gotei 13. Tras dejar su puesto como Capitán, 
+                        se traslada a Karakura Town, donde se convierte en médico. Durante años, Ishin guarda en secreto su pasado como Shinigami, 
+                        protegiendo a su familia de las amenazas sobrenaturales. Su verdadera identidad como Shinigami y su relación con los eventos 
+                        que rodean a Ichigo son revelados más tarde en la serie, cuando se descubre que tiene una conexión profunda con los poderes 
+                        de su hijo.
+                      `,
+                      "personalidad": `
+                        Ishin es un personaje carismático y extrovertido. Aunque es un hombre serio y dedicado a su familia, también tiene una personalidad 
+                        juguetona y bromista, especialmente con sus hijos. A menudo se muestra como una figura protectora y cariñosa, pero también 
+                        es un hombre de gran integridad y fuerza de voluntad. A pesar de su actitud relajada, Ishin es un hombre con una gran carga emocional 
+                        debido a su pasado como Shinigami y su papel en la protección de su familia.
+                      `,
+                      "batallas": "Ishin Kurosaki vs Aizen Sosuke[Perdedor]"
+                    },
+
+                    {
+                      "nombre": "Masaki Kurosaki",
+                      "raza": "Shinigami (antiguo)",
+                      "cumpleaños": "No especificado",
+                      "altura": "No especificado",
+                      "peso": "No especificado",
+                      "afiliacion": "No especificado",
+                      "ocupacion": "Madre, esposa",
+                      "shikai": "No especificado",
+                      "bankai": "No especificado",
+                      "poderes": `
+                        Masaki Kurosaki era una mujer de gran fortaleza y habilidad. Aunque no se detalla completamente en la serie, se sabe que Masaki era una 
+                        Shinigami que poseía un alto nivel de poder espiritual. Su habilidad más destacada era su capacidad para defenderse de los Hollows y 
+                        proteger a los demás, lo que la convirtió en una figura protectora para su familia. Además, su poder como Shinigami le permitió sellar 
+                        una gran parte de su propia energía para evitar que los Hollows la detectaran.
+                      `,
+                      "habilidades": `
+                        - Gran habilidad espiritual: Como Shinigami, Masaki poseía un alto nivel de poder espiritual, que le permitía defenderse de los Hollows.
+                        - Protección: Su habilidad para proteger a sus seres queridos, especialmente a su hijo Ichigo, era una de sus mayores virtudes.
+                      `,
+                      "nivel_de_poder": `
+                        Aunque no se muestra en su totalidad, el poder de Masaki era considerable, y se puede inferir que tenía un alto nivel de Reiatsu 
+                        (energía espiritual). Masaki fue capaz de enfrentarse a Hollows poderosos, y su habilidad para sellar su poder para proteger a su familia 
+                        muestra que tenía un control excepcional sobre su energía espiritual. A pesar de no ser una luchadora activa, su poder fue crucial 
+                        para la protección de Ichigo en sus primeros años.
+                      `,
+                      "galeria": JSON.stringify([
+                        "https://i.redd.it/what-are-your-honest-thoughts-about-masaki-kurosaki-v0-2thfk0otg56e1.jpg?width=1600&format=pjpg&auto=webp&s=a871fd47e9393a61edbe5f3dc602c15957917823",
+                        "https://i.pinimg.com/736x/1b/ed/2a/1bed2a80b26e383bdc0b1fe971adaa0e.jpg",
+                        "https://comicbook.com/wp-content/uploads/sites/4/2022/12/e0b9f6a5-2856-490f-a201-569cc92e464c.jpg",
+                        "https://preview.redd.it/ylahfwtxiyqb1.jpg?auto=webp&s=e27af8050293c7e705bd9bd7ab51783193fa7169"
+                      ]),
+                      "historia": `
+                        Masaki Kurosaki es la madre de Ichigo Kurosaki y la esposa de Isshin Kurosaki. Ella fue una Shinigami que, en su juventud, se 
+                        encontró con Isshin y se enamoró de él. Durante una de sus misiones, Masaki fue atacada por un Hollow, y en un intento por salvarla, 
+                        Isshin la salvó, lo que resultó en la pérdida de su poder como Shinigami. Después de este evento, Masaki se mudó a Karakura Town, 
+                        donde vivió una vida normal como madre y esposa. Sin embargo, su sacrificio y su amor por su familia tuvieron un impacto duradero 
+                        en Ichigo y en el destino de su hijo.
+                      `,
+                      "personalidad": `
+                        Masaki era una mujer cálida, cariñosa y protectora. Su mayor deseo era cuidar a su familia, especialmente a su hijo Ichigo. 
+                        A pesar de las tragedias que enfrentó, Masaki mantuvo una actitud positiva y amorosa hacia todos los que la rodeaban. 
+                        Su personalidad se destacó por su fortaleza interior, su dedicación y su capacidad para hacer sacrificios por el bienestar de su familia.
+                      `,
+                      "batallas": "Masaki Kurosaki vs Hollow (Perdedora)"
+                    }
+                    
+                    
+
+                    
+
+                    
+                    
+                    
+                  
+                  
+                
+                
+          
+            
           
       
       
