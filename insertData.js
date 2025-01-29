@@ -7,7 +7,7 @@ const Character = require("./models/character")(
 console.log(Character); // Esto debe mostrar la función de creación del modelo
 
 const characters = [
-  /*{
+  {
     nombre: "Uryū Ishida",
     raza: "Quincy",
     cumpleaños: "6 de noviembre",
@@ -796,7 +796,7 @@ const characters = [
               Unohana es una persona sabia y compasiva, pero no duda en luchar si es necesario para proteger a los demás.
           `,
           batallas: "Unohana vs Kenpachi Zaraki[Perdedora], Unohana vs Yachiru Kusajishi[Ganadora]",
-        }
+        },
           
             {
               nombre: "Tōsen Kaname",
@@ -1269,7 +1269,7 @@ const characters = [
                         A pesar de su actitud infantil, es increíblemente perceptiva y muestra una gran lealtad a la 11ª División. También tiene un lado aterrador cuando se enoja, especialmente si alguien insulta a Kenpachi.
                     `,
                 batallas: "Yachiru vs Gremmy[Perdedora]",
-              }
+              },
                 
                   {
                     nombre: "Grimmjow Jaegerjaquez",
@@ -1509,7 +1509,7 @@ const characters = [
                       Su actitud calmada y su sabiduría le permiten tomar decisiones justas en situaciones difíciles, y siempre actúa con una gran dignidad y honor.
                     `,
                     "batallas": "Harribel vs Hitsugaya[Perdedora]"
-                  }
+                  },
                     {
                       "nombre": "Jugram Haschwalth",
                       "raza": "Quincy",
@@ -1754,7 +1754,7 @@ const characters = [
                         Su presencia es ominosa, y su forma de pensar es fría y despiadada, lo que lo convierte en un enemigo aterrador.
                       `,
                       "batallas": "Pernida Parnkgjas vs Mayuri Kurotsuchi[Perdedor], Pernida Parnkgjas vs Urahara Kisuke[Perdedor]"
-                    },*/
+                    },
                     {
                       "nombre": "Ishin Kurosaki",
                       "raza": "Shinigami",
