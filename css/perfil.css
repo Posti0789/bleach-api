@@ -1,10 +1,30 @@
-/* Estilos para la sección del perfil */
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://images4.alphacoders.com/294/294568.png') no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
 .perfil-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mejorar legibilidad */
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out;
 }
 
 .perfil-info {
@@ -13,52 +33,202 @@
 }
 
 .perfil-avatar {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.perfil-avatar:hover {
+    transform: scale(1.1);
 }
 
 .perfil-info h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
+    font-size: 28px;
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .perfil-info p {
     font-size: 16px;
-    margin: 5px 0;
+    color: #bbb;
+    line-height: 1.5;
 }
 
-/* Estilos para la sección de personajes favoritos */
+/* Puntos y Nivel */
+.puntos-nivel {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.puntos-nivel div {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.puntos-nivel div:hover {
+    background-color: rgba(0, 150, 136, 0.6);
+    transform: translateY(-5px);
+}
+
+.puntos-nivel h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.puntos-nivel p {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Personajes Favoritos */
 .favoritos-container {
     margin-top: 40px;
+    text-align: center;
 }
 
 .favoritos-container h3 {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 #personajes-favoritos {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .personaje {
+    width: 120px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.personaje:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .personaje img {
     width: 100px;
     height: 100px;
-    border-radius: 8px;
+    border-radius: 10px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.personaje img:hover {
+    transform: scale(1.1);
 }
 
 .personaje h4 {
+    font-size: 14px;
+    color: #fff;
     margin-top: 10px;
-    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .perfil-container {
+        padding: 20px;
+    }
+
+    .perfil-avatar {
+        width: 130px;
+        height: 130px;
+    }
+
+    .perfil-info h2 {
+        font-size: 24px;
+    }
+
+    .perfil-info p {
+        font-size: 14px;
+    }
+
+    .puntos-nivel {
+        flex-direction: column;
+    }
+
+    .puntos-nivel div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #personajes-favoritos {
+        flex-direction: column;
+    }
+
+    .personaje img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .personaje h4 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfil-container {
+        padding: 15px;
+    }
+
+    .perfil-avatar {
+        width: 110px;
+        height: 110px;
+    }
+
+    .perfil-info h2 {
+        font-size: 22px;
+    }
+
+    .perfil-info p {
+        font-size: 12px;
+    }
+
+    .puntos-nivel div {
+        padding: 10px 15px;
+    }
+
+    .favoritos-container h3 {
+        font-size: 18px;
+    }
+
+    .personaje img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .personaje h4 {
+        font-size: 10px;
+    }
 }
