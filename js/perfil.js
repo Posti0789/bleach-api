@@ -2,30 +2,33 @@ document.addEventListener('DOMContentLoaded', obtenerPerfil);
 
 async function obtenerPerfil() {
     try {
-        // Obtener los datos del usuario desde localStorage
         const userData = JSON.parse(localStorage.getItem('user'));
-        console.log('Datos del usuario:', userData); // Verifica los datos del usuario
 
-        if (userData) {
-            // Mostrar la información del perfil
-            document.getElementById('perfil-avatar').src = userData.imagen_perfil || 'default-avatar.png';
-            document.getElementById('perfil-nombre').textContent = userData.nombre;
-            document.getElementById('perfil-email').textContent = userData.email;
-            document.getElementById('perfil-bio').textContent = userData.biografia || 'No disponible';
-            document.getElementById('perfil-puntos').textContent = userData.puntos || 0;
-            document.getElementById('perfil-nivel').textContent = userData.nivel || 1;
+        // Verifica si los datos del usuario existen en localStorage
+        if (!userData) {
+            console.error('No se encontraron datos del usuario en localStorage');
+            alert('No se encontraron datos del usuario. Por favor, inicia sesión nuevamente.');
+            return;
+        }
 
-            // Si el usuario tiene personajes favoritos, obtenerlos
-            if (userData.personajes_favoritos) {
-                const personajesFavoritosIDs = JSON.parse(userData.personajes_favoritos);
-                console.log('Personajes favoritos:', personajesFavoritosIDs); // Verifica las IDs de los personajes favoritos
-                
-                // Hacer peticiones para obtener los personajes
-                const personajes = await Promise.all(personajesFavoritosIDs.map(id => fetchPersonajeById(id)));
-                
-                // Mostrar los personajes favoritos
-                mostrarPersonajesFavoritos(personajes);
-            }
+        console.log('Datos del usuario cargados:', userData);
+
+        // Mostrar la información del perfil
+        document.getElementById('perfil-avatar').src = userData.imagen_perfil || 'default-avatar.png';
+        document.getElementById('perfil-nombre').textContent = userData.nombre;
+        document.getElementById('perfil-email').textContent = userData.email;
+        document.getElementById('perfil-bio').textContent = userData.biografia || 'No disponible';
+        document.getElementById('perfil-puntos').textContent = userData.puntos || 0;
+        document.getElementById('perfil-nivel').textContent = userData.nivel || 1;
+
+        // Cargar los personajes favoritos si existen
+        if (userData.personajes_favoritos) {
+            const personajesFavoritosIDs = JSON.parse(userData.personajes_favoritos);
+            console.log('Personajes favoritos:', personajesFavoritosIDs);
+            
+            // Obtener los personajes favoritos
+            const personajes = await Promise.all(personajesFavoritosIDs.map(id => fetchPersonajeById(id)));
+            mostrarPersonajesFavoritos(personajes);
         }
     } catch (error) {
         console.error('Error al obtener el perfil:', error);
@@ -38,64 +41,126 @@ async function fetchPersonajeById(id) {
     try {
         const response = await fetch(`http://localhost:3000/api/personajes/${id}`);
         const personaje = await response.json();
-        console.log(`Datos del personaje ${id}:`, personaje); // Verifica los datos del personaje
+        console.log(`Datos del personaje ${id}:`, personaje);
         return personaje;
     } catch (error) {
         console.error('Error al obtener el personaje:', error);
-        return null; // Si hay un error, devolvemos null
+        return null;
     }
 }
 
 // Función para mostrar los personajes favoritos en el HTML
 function mostrarPersonajesFavoritos(personajes) {
     const contenedorPersonajes = document.getElementById('personajes-favoritos');
-    contenedorPersonajes.innerHTML = ''; // Limpiar el contenedor antes de agregar los personajes
+    contenedorPersonajes.innerHTML = '';
 
-    // Mostrar solo los tres primeros personajes
     personajes.slice(0, 3).forEach(personaje => {
-        if (personaje) { // Asegúrate de que el personaje no sea null
+        if (personaje) {
             const personajeElement = document.createElement('div');
             personajeElement.classList.add('personaje');
-            
-            // Crear los elementos de nombre y foto
+
             const personajeNombre = document.createElement('h4');
-            personajeNombre.textContent = personaje.nombre;  // Suponiendo que 'nombre' es la propiedad del personaje
-            
+            personajeNombre.textContent = personaje.nombre;
+
             const personajeFoto = document.createElement('img');
-            
-            // Verificamos la propiedad 'galeria'
-            console.log(`Galería del personaje ${personaje.nombre}:`, personaje.galeria); // Verifica la galería
-            
-            let imagenUrl = 'default-image.jpg'; // Imagen por defecto si no hay galería o está vacía
-            
-            // Verificamos si la galería está correctamente formateada
+            let imagenUrl = 'default-image.jpg';
+
+            // Validación de la galería del personaje
             if (personaje.galeria && Array.isArray(personaje.galeria)) {
-                // Si es un array de URLs
-                console.log(`URL de imagen de ${personaje.nombre}:`, personaje.galeria[0]); // Mostramos la primera imagen
                 imagenUrl = personaje.galeria[0];
             } else if (typeof personaje.galeria === 'string') {
-                // Si la galería está guardada como una cadena de texto (puede ser un JSON o algo similar)
-                console.log(`Galería de ${personaje.nombre} como string:`, personaje.galeria);
                 try {
-                    // Intentamos parsear la cadena como JSON si es necesario
                     const parsedGaleria = JSON.parse(personaje.galeria);
                     if (Array.isArray(parsedGaleria)) {
-                        imagenUrl = parsedGaleria[0];  // Tomamos la primera imagen
+                        imagenUrl = parsedGaleria[0];
                     }
                 } catch (e) {
                     console.warn(`Error al parsear la galería de ${personaje.nombre}:`, e);
                 }
             }
 
-            // Asignar la URL de la imagen
             personajeFoto.src = imagenUrl;
-            personajeFoto.alt = personaje.nombre;  // Usamos el nombre como alt para la imagen
+            personajeFoto.alt = personaje.nombre;
 
-            // Agregar la foto y nombre al contenedor del personaje
             personajeElement.appendChild(personajeFoto);
             personajeElement.appendChild(personajeNombre);
-
             contenedorPersonajes.appendChild(personajeElement);
         }
     });
 }
+
+// Código para manejar la actualización de la imagen de perfil
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modal");
+    const closeModal = document.getElementById("closeModal");
+    const guardarImagen = document.getElementById("guardarImagen");
+    const cancelarModal = document.getElementById("cancelarModal");
+    const modalImages = document.querySelectorAll(".modal-image");
+    const perfilAvatar = document.getElementById("perfil-avatar");
+    
+    let selectedImageUrl = "";
+
+    perfilAvatar.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    modalImages.forEach(image => {
+        image.addEventListener("click", () => {
+            selectedImageUrl = image.getAttribute("data-img-url");
+            perfilAvatar.src = selectedImageUrl;
+        });
+    });
+
+    guardarImagen.addEventListener("click", async () => {
+        if (selectedImageUrl) {
+            try {
+                const userData = JSON.parse(localStorage.getItem('user'));
+
+                if (!userData || !userData.id) {
+                    console.error("No se pudo obtener la información del usuario.");
+                    alert("Error al actualizar la imagen. Intenta iniciar sesión nuevamente.");
+                    return;
+                }
+
+                const response = await fetch(`http://localhost:3000/api/users/${userData.id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        imagen_perfil: selectedImageUrl,
+                    }),
+                });
+
+                const data = await response.json();
+                console.log('Respuesta de la API después de actualizar:', data);
+
+                if (response.ok) {
+                    alert("Imagen de perfil actualizada correctamente");
+
+                    // Actualizar los datos en localStorage
+                    userData.imagen_perfil = selectedImageUrl;
+                    localStorage.setItem('user', JSON.stringify(userData));
+
+                    // Actualizar la imagen en la UI
+                    perfilAvatar.src = selectedImageUrl;
+                } else {
+                    alert("Error al actualizar la imagen de perfil.");
+                }
+            } catch (error) {
+                console.error("Error al guardar la imagen de perfil", error);
+                alert("Hubo un error al guardar la imagen de perfil.");
+            }
+        } else {
+            alert("Por favor, selecciona una imagen.");
+        }
+    });
+
+    cancelarModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+});
