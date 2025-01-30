@@ -9,15 +9,25 @@
 </head>
 <body>
     <header>
+        <!-- Contenedor para la foto de perfil y nombre del usuario -->
+        <div class="user-info" id="user-info">
+            <img id="user-avatar" src="" alt="Foto de Perfil" class="user-avatar">
+            <span id="user-name" class="user-name"></span>
+        </div>
+
+        <!-- Logo -->
         <div class="logo" id="logo">
             <img src="../fotos/Logo.png" alt="Bleach Logo">
         </div>
+
+        <!-- Switch de tema -->
         <div class="theme-switcher">
             <button id="theme-toggle">
                 <i class="fas fa-sun" id="sun-icon"></i> <!-- Sol -->
                 <i class="fas fa-moon" id="moon-icon"></i> <!-- Luna -->
             </button>
         </div>
+
         <!-- Barra de búsqueda -->
         <div class="search-bar" id="search-bar">
             <input type="text" placeholder="Buscar...">
