@@ -149,6 +149,28 @@ header:hover {
 
 
 
+.user-info {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10px;  /* Mover al lado derecho */
+    top: 10px;
+    color: white;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
 
 
 
@@ -215,3 +237,5 @@ header:hover {
 .logo img {
     animation: fadeSlideIn 1s ease-out;
 }
+
+

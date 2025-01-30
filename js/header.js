@@ -23,3 +23,20 @@ const searchBar = document.getElementById('search-bar');
 searchButton.addEventListener('click', () => {
     searchBar.classList.toggle('show');
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Obtener los datos del usuario desde el localStorage
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (user) {
+        // Asignar los datos al DOM
+        const userInfoDiv = document.getElementById("user-info");
+        const userName = document.getElementById("user-name");
+        const userAvatar = document.getElementById("user-avatar");
+
+        // Asignar la foto de perfil y el nombre del usuario
+        userAvatar.src = user.imagen_perfil || "../fotos/default-avatar.png"; // Foto de perfil o una predeterminada
+        userName.textContent = user.nombre;
+    }
+});
