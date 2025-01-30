@@ -1,0 +1,64 @@
+/* Estilos para la sección del perfil */
+.perfil-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.perfil-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.perfil-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Estilos para la sección de personajes favoritos */
+.favoritos-container {
+    margin-top: 40px;
+}
+
+.favoritos-container h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#personajes-favoritos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.personaje {
+    text-align: center;
+}
+
+.personaje img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.personaje h4 {
+    margin-top: 10px;
+    font-size: 16px;
+}

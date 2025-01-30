@@ -35,6 +35,20 @@ app.get('/api/characters', async (req, res) => {
   }
 });
 
+// 📌 GET: Obtener un personaje por ID
+app.get('/api/personajes/:id', async (req, res) => {
+  try {
+    const personaje = await Character.findByPk(req.params.id); // Busca el personaje por su ID
+    if (!personaje) {
+      return res.status(404).json({ error: 'Personaje no encontrado' });
+    }
+    res.json(personaje); // Retorna el personaje en formato JSON
+  } catch (error) {
+    res.status(500).json({ error: 'Error al obtener el personaje' });
+  }
+});
+
+
 // 📌 GET: Obtener todos los usuarios
 app.get('/api/users', async (req, res) => {
   try {
@@ -98,3 +112,4 @@ const port = 3000;
 http.createServer(app).listen(port, () => {
   console.log(`Servidor HTTP escuchando en el puerto ${port}`);
 });
+

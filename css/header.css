@@ -146,9 +146,6 @@ header:hover {
     color: white;
 }
 
-
-
-
 .user-info {
     display: flex;
     align-items: center;
@@ -156,8 +153,17 @@ header:hover {
     right: 10px;  /* Mover al lado derecho */
     top: 10px;
     color: white;
+    cursor: pointer; /* Cambiar cursor para indicar que es interactivo */
 }
 
+/* Contenedor de la foto de perfil y el nombre */
+.user-avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Foto de perfil */
 .user-avatar {
     width: 40px;
     height: 40px;
@@ -166,11 +172,64 @@ header:hover {
     margin-right: 10px;
 }
 
+/* Nombre de usuario */
 .user-name {
     font-size: 18px;
     font-weight: bold;
 }
 
+/* Menú desplegable */
+.dropdown-menu {
+    display: none; /* Ocultar inicialmente */
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 10;
+}
+
+.dropdown-menu button {
+    background-color: #f1c40f;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+}
+
+.dropdown-menu button:hover {
+    background-color: #d4ac0d;
+}
+
+/* Opción de "Iniciar sesión" cuando no hay usuario logeado */
+#login-menu-option {
+    position: absolute;
+    right: 10px;  /* Alineado con el avatar y el nombre */
+    top: 10px;
+    color: white;
+}
+
+#login-menu-option button {
+    background-color: #f1c40f;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#login-menu-option button:hover {
+    background-color: #d4ac0d;
+}
 
 
 
