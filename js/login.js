@@ -9,22 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = document.getElementById("password").value.trim();
 
         try {
-            // Hacer solicitud para buscar al usuario por nombre
-            const response = await fetch(`http://localhost:3000/api/users?nombre=${nombre}`);
-            const user = await response.json();
+            // Hacer solicitud para buscar todos los usuarios
+            const response = await fetch(`http://localhost:3000/api/users`);
+            const users = await response.json();
 
-            if (user.length === 0) {
+            // Buscar el usuario que coincida con el nombre y la contraseña
+            const userData = users.find(user => user.nombre === nombre);
+
+            if (!userData) {
                 mensaje.textContent = "Usuario no encontrado.";
                 return;
             }
-
-            const userData = user[0];
 
             // Hashear la contraseña proporcionada por el usuario usando SHA-256
             const hashedPassword = await hashPassword(password);
 
             // Verificar si la contraseña hasheada coincide con la contraseña almacenada
             if (hashedPassword === userData.password) {  // Compara la contraseña hasheada directamente
+                // Limpiar el localStorage antes de guardar nuevos datos
+                localStorage.removeItem("user");
+
                 // Guardar los datos del usuario en el localStorage
                 localStorage.setItem("user", JSON.stringify(userData));
 

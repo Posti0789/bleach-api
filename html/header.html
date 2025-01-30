@@ -9,17 +9,29 @@
 </head>
 <body>
     <header>
-        <!-- Contenedor para la foto de perfil y nombre del usuario -->
-        <div class="user-info" id="user-info">
-            <img id="user-avatar" src="" alt="Foto de Perfil" class="user-avatar">
-            <span id="user-name" class="user-name"></span>
+        <!-- Contenedor para la foto de perfil y nombre (solo se muestra si hay usuario logeado) -->
+        <div class="user-info" id="user-info" style="display: none;">
+            <div class="user-avatar-container">
+                <img id="user-avatar" src="" alt="Foto de Perfil" class="user-avatar">
+                <span id="user-name" class="user-name"></span>
+            </div>
+            <!-- Menú desplegable -->
+            <div id="dropdown-menu" class="dropdown-menu" style="display: none;">
+                <button id="view-profile">Ver perfil</button>
+                <button id="logout">Cerrar sesión</button>
+            </div>
         </div>
-
+    
+        <!-- Opción de Iniciar sesión cuando no hay usuario logeado -->
+        <div id="login-menu-option" class="login-menu-option" style="display: none;">
+            <button id="login-button" onclick="window.location.href='../html/login.html'">Iniciar sesión</button>
+        </div>
+    
         <!-- Logo -->
         <div class="logo" id="logo">
             <img src="../fotos/Logo.png" alt="Bleach Logo">
         </div>
-
+    
         <!-- Switch de tema -->
         <div class="theme-switcher">
             <button id="theme-toggle">
@@ -27,7 +39,7 @@
                 <i class="fas fa-moon" id="moon-icon"></i> <!-- Luna -->
             </button>
         </div>
-
+    
         <!-- Barra de búsqueda -->
         <div class="search-bar" id="search-bar">
             <input type="text" placeholder="Buscar...">
@@ -36,7 +48,7 @@
             </button>
         </div>
     </header>
-
+    
     <script src="../js/header.js"></script>
 </body>
 </html>
