@@ -11,6 +11,8 @@ app.use(express.json()); // Para manejar JSON en las solicitudes
 const bleachDb = new Sequelize({
   dialect: 'mysql',
   host: 'localhost',
+  port: 3308,  // Especificamos el puerto 3308
+
   username: 'root',
   password: '',
   database: 'bleach_db',

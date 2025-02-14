@@ -232,8 +232,6 @@ body {
         font-size: 10px;
     }
 }
-
-
 /* Fondo oscuro para el modal */
 #modal {
     display: none;
@@ -246,14 +244,15 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinea arriba */
+    padding-top: 180px; /* Baja el modal */
 }
 
 /* Contenedor del modal */
 #modal .modal-content {
     background: white;
     width: 90%;
-    max-width: 500px;
+    max-width: 650px; /* Más ancho */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -283,17 +282,23 @@ body {
 }
 
 /* Estilo de las imágenes dentro del modal */
-#modal .modal-image {
+.modal-image {
     width: 80px;
     height: 80px;
     border-radius: 10px;
     cursor: pointer;
     object-fit: cover; /* Evita que las imágenes se deformen */
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
-#modal .modal-image:hover {
+/* Aumenta ligeramente el tamaño al pasar el mouse */
+.modal-image:hover {
     transform: scale(1.1);
+}
+
+/* Borde rojo cuando se selecciona */
+.modal-image.selected {
+    border: 3px solid red;
 }
 
 /* Botones del modal */
