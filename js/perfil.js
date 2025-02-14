@@ -87,29 +87,38 @@ function mostrarPersonajesFavoritos(personajes) {
             contenedorPersonajes.appendChild(personajeElement);
         }
     });
-}
-
-// Código para manejar la actualización de la imagen de perfil
-document.addEventListener("DOMContentLoaded", () => {
+}document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeModal = document.getElementById("closeModal");
     const guardarImagen = document.getElementById("guardarImagen");
     const cancelarModal = document.getElementById("cancelarModal");
-    const modalImages = document.querySelectorAll(".modal-image");
+    const modalImages = document.querySelectorAll(".modal-image"); 
     const perfilAvatar = document.getElementById("perfil-avatar");
     
     let selectedImageUrl = "";
 
     perfilAvatar.addEventListener("click", () => {
-        modal.style.display = "block";
+        modal.style.display = "flex";  // Asegura que flexbox se aplica
+        modal.style.justifyContent = "center"; // Lo mantiene centrado
+        modal.style.alignItems = "flex-start"; // Lo mantiene más abajo
     });
+    
 
     closeModal.addEventListener("click", () => {
         modal.style.display = "none";
+        modal.style.justifyContent = ""; // Resetea estilos
+        modal.style.alignItems = "";
     });
+    
 
     modalImages.forEach(image => {
         image.addEventListener("click", () => {
+            // Quitar la clase "selected" de todas las imágenes
+            modalImages.forEach(img => img.classList.remove("selected"));
+
+            // Agregar la clase "selected" a la imagen clickeada
+            image.classList.add("selected");
+
             selectedImageUrl = image.getAttribute("data-img-url");
             perfilAvatar.src = selectedImageUrl;
         });
@@ -119,13 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (selectedImageUrl) {
             try {
                 const userData = JSON.parse(localStorage.getItem('user'));
-
+    
                 if (!userData || !userData.id) {
                     console.error("No se pudo obtener la información del usuario.");
                     alert("Error al actualizar la imagen. Intenta iniciar sesión nuevamente.");
                     return;
                 }
-
+    
                 const response = await fetch(`http://localhost:3000/api/users/${userData.id}`, {
                     method: 'PUT',
                     headers: {
@@ -135,19 +144,22 @@ document.addEventListener("DOMContentLoaded", () => {
                         imagen_perfil: selectedImageUrl,
                     }),
                 });
-
+    
                 const data = await response.json();
                 console.log('Respuesta de la API después de actualizar:', data);
-
+    
                 if (response.ok) {
                     alert("Imagen de perfil actualizada correctamente");
-
+    
                     // Actualizar los datos en localStorage
                     userData.imagen_perfil = selectedImageUrl;
                     localStorage.setItem('user', JSON.stringify(userData));
-
+    
                     // Actualizar la imagen en la UI
                     perfilAvatar.src = selectedImageUrl;
+    
+                    // ❌ Cerrar el modal después de guardar
+                    modal.style.display = "none";  
                 } else {
                     alert("Error al actualizar la imagen de perfil.");
                 }
@@ -159,8 +171,9 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Por favor, selecciona una imagen.");
         }
     });
-
+    
     cancelarModal.addEventListener("click", () => {
         modal.style.display = "none";
     });
+    
 });
