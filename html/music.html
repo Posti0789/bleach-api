@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bleach - Música</title>
+    <link rel="stylesheet" href="../css/music.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎧 Música de Bleach 🎶</h1>
+    </header>
+
+    <main>
+        <!-- Sección de Reproductor de Spotify -->
+        <section class="music-section">
+            <h2>🎼 Playlist Oficial</h2>
+
+            <div class="music-container">
+                <div class="visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <iframe id="spotify-frame" 
+                    style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/album/7Bm7S7pnSetysRgACOpWtD" 
+                    width="100%" 
+                    height="380" 
+                    frameborder="0" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+            </div>
+
+            <div class="buttons">
+                <button class="playlist-btn" data-playlist="opening">🔥 Openings</button>
+                <button class="playlist-btn" data-playlist="soundtrack">🎶 Soundtrack</button>
+                <button class="playlist-btn" data-playlist="epic">⚡ Épico</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/music.js"></script>
+
+</body>
+</html>
