@@ -9,6 +9,33 @@
 </head>
 <body>
     <header>
+
+        <!-- Ícono Hamburguesa -->
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <!-- Menú lateral -->
+    <nav class="sidebar" id="sidebar">
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li class="submenu">
+                <a href="#" class="submenu-toggle">Servicios ▾</a>
+                <ul class="submenu-items">
+                    <li><a href="#">Diseño Web</a></li>
+                    <li class="submenu">
+                        <a href="#" class="submenu-toggle">Desarrollo ▾</a>
+                        <ul class="submenu-items">
+                            <li><a href="#">Frontend</a></li>
+                            <li><a href="#">Backend</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+        
         <!-- Contenedor para la foto de perfil y nombre (solo se muestra si hay usuario logeado) -->
         <div class="user-info" id="user-info" style="display: none;">
             <div class="user-avatar-container">

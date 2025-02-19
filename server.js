@@ -14,6 +14,7 @@ const bleachDb = new Sequelize({
   port: 3308,  // Especificamos el puerto 3308
 
   username: 'root',
+  port: 3308,
   password: '',
   database: 'bleach_db',
 });
