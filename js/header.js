@@ -85,3 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Alternar menú hamburguesa
+document.getElementById("menuToggle").addEventListener("click", function () {
+    document.getElementById("sidebar").classList.toggle("show");
+});
+
+// Alternar submenús al hacer clic
+document.querySelectorAll(".submenu-toggle").forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+        e.preventDefault(); // Evita que recargue la página
+        this.parentElement.classList.toggle("show");
+    });
+});

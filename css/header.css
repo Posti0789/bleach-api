@@ -298,3 +298,125 @@ header:hover {
 }
 
 
+/* Ícono hamburguesa */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Efecto al pasar el cursor */
+.menu-toggle:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+}
+
+/* Menú lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: #222;
+    padding-top: 70px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.4s ease-in-out;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Mostrar el menú */
+.sidebar.show {
+    left: 0;
+}
+
+/* Menú en pantallas grandes */
+@media screen and (min-width: 768px) {
+    .sidebar {
+        width: 280px;
+        left: -280px;
+    }
+}
+
+/* Estilo de los enlaces del menú */
+.menu {
+    list-style: none;
+    padding: 15px;
+}
+
+.menu li {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    font-size: 18px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+/* Hover en opciones */
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Submenús */
+.submenu-items {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+/* Mostrar submenú cuando se haga clic */
+.submenu.show > .submenu-items {
+    display: block;
+}
+
+/* Flechas de submenús */
+.submenu-toggle {
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+/* Flecha animada */
+.submenu-toggle::after {
+    content: "▶";
+    position: absolute;
+    right: 15px;
+    transition: transform 0.3s;
+}
+
+/* Rotación de la flecha al abrir el submenú */
+.submenu.show > .submenu-toggle::after {
+    transform: rotate(90deg);
+}
+
+/* Animaciones de los submenús */
+.submenu-items li {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Submenús aparecen de forma elegante */
+.submenu.show > .submenu-items li {
+    opacity: 1;
+    transform: translateY(0);
+}
