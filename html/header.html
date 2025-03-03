@@ -75,6 +75,32 @@
             </button>
         </div>
     </header>
+    <div id="google_translate_element"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            { pageLanguage: 'es', includedLanguages: 'en,es,fr,de,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 
+            'google_translate_element'
+        );
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+<div id="contenido"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("body.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("contenido").innerHTML = data;
+            })
+            .catch(error => console.error("Error al cargar el body:", error));
+    });
+</script>
+
     
     <script src="../js/header.js"></script>
 </body>
