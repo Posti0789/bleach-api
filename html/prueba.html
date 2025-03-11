@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personajes de Bleach</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d; /* Fondo oscuro estilo Bleach */
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4500; /* Naranja fuerte */
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .character-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }.character-card {
+  background-color: #1a1a1a;
+  border: 2px solid #ff4500;
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 69, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Evita desbordes de imagen */
+}
+
+.character-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center top; /* Centra mejor la imagen */
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+    .character-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(255, 69, 0, 0.7);
+    }
+
+
+    .character-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #ff4500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Personajes de Bleach</h1>
+  <div id="character-list" class="character-list">
+    <!-- Se cargarán los personajes aquí -->
+  </div>
+
+  <script>
+   async function fetchCharacters() {
+      try {
+        const response = await fetch('http://localhost:3000/api/characters');
+        const characters = await response.json();
+
+        if (characters.length === 0) {
+          document.getElementById('character-list').innerHTML = '<p>No se encontraron personajes.</p>';
+          return;
+        }
+
+        const characterList = document.getElementById('character-list');
+        characterList.innerHTML = ''; 
+
+        characters.forEach(character => {
+          const galeria = character.galeria ? JSON.parse(character.galeria) : [];
+          const imageUrl = galeria.length >= 3 ? galeria[2] : 'https://via.placeholder.com/280x350?text=No+Image';
+
+          const characterCard = document.createElement('div');
+          characterCard.classList.add('character-card');
+
+          characterCard.innerHTML = `
+            <img src="${imageUrl}" alt="${character.nombre}">
+            <div class="character-name">${character.nombre}</div>
+          `;
+
+          characterList.appendChild(characterCard);
+        });
+      } catch (error) {
+        console.error('Error al obtener los personajes:', error);
+        document.getElementById('character-list').innerHTML = '<p>Hubo un error al cargar los personajes.</p>';
+      }
+    }
+
+    window.onload = fetchCharacters;
+  </script>
+
+</body>
+</html>

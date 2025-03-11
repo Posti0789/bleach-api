@@ -97,3 +97,81 @@ document.querySelectorAll(".submenu-toggle").forEach((toggle) => {
         this.parentElement.classList.toggle("show");
     });
 });
+console.log("✅ header.js ha sido cargado y se está ejecutando!");
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("🌍 DOM listo dentro de header.js");
+
+    // Comprobar si los elementos existen
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.getElementById("sidebar");
+
+    if (!menuToggle) {
+        console.error("❌ ERROR: No se encontró #menuToggle en el DOM.");
+    } else {
+        console.log("✅ #menuToggle encontrado en el DOM.");
+    }
+
+    if (!sidebar) {
+        console.error("❌ ERROR: No se encontró #sidebar en el DOM.");
+    } else {
+        console.log("✅ #sidebar encontrado en el DOM.");
+    }
+
+    if (!menuToggle || !sidebar) {
+        console.warn("⚠️ Algo falta, el evento no se añadirá.");
+        return;
+    }
+
+    menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        console.log("📌 Menú toggle activado.");
+    });
+
+    console.log("✅ header.js terminó de inicializar.");
+});
+// Crear partículas de Reitsu
+function createParticles() {
+    const particleContainer = document.querySelector('.particle-background');
+    for (let i = 0; i < 50; i++) { // Creamos 50 partículas
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        // Establecemos posiciones aleatorias dentro de la pantalla
+        const x = Math.random() * window.innerWidth;
+        const delay = Math.random() * 3 + 's'; // Retraso aleatorio para las partículas
+        particle.style.left = `${x}px`;
+        particle.style.animationDelay = delay;
+
+        // Añadimos la partícula al fondo
+        particleContainer.appendChild(particle);
+    }
+}
+
+// Llamamos a la función para crear partículas al cargar la página
+createParticles();
+
+
+tsParticles.load("particlesCanvas", {
+    particles: {
+      number: { value: 100, density: { enable: true, area: 800 } },
+      color: { value: ["#00FFFF", "#00A2FF", "#9400D3"] }, // Azul, celeste y morado
+      shape: { type: "circle" },
+      opacity: { value: 0.6, random: true, anim: { enable: true, speed: 0.5 } },
+      size: { value: { min: 2, max: 6 }, random: true },
+      move: {
+        enable: true,
+        speed: 1.2,
+        direction: "top",
+        straight: false,
+        outModes: { default: "out" },
+        trail: { enable: true, length: 4, fillColor: "#000000" } // Rastro de energía
+      }
+    },
+    background: { color: "#111111" },
+    interactivity: {
+      events: { onHover: { enable: true, mode: "repulse" }, onClick: { enable: true, mode: "push" } },
+      modes: { repulse: { distance: 100 }, push: { quantity: 4 } }
+    }
+  });
+  
