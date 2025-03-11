@@ -49,6 +49,37 @@ app.get('/api/personajes/:id', async (req, res) => {
   }
 });
 
+// 📌 GET: Obtener un personaje por ID (Corrección)
+app.get('/api/characters/:id', async (req, res) => {
+  try {
+    const character = await Character.findByPk(req.params.id);
+    if (!character) {
+      return res.status(404).json({ error: 'Personaje no encontrado' });
+    }
+    res.json(character);
+  } catch (error) {
+    console.error('❌ Error al obtener el personaje:', error);
+    res.status(500).json({ error: 'Error al obtener el personaje' });
+  }
+});
+
+app.get('/api/characters/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const character = await db.query('SELECT * FROM characters WHERE id = ?', [id]);
+
+        if (character.length === 0) {
+            return res.status(404).json({ message: "Personaje no encontrado" });
+        }
+
+        res.json(character[0]);
+    } catch (error) {
+        console.error('Error al obtener el personaje:', error);
+        res.status(500).json({ message: "Error del servidor" });
+    }
+});
+
 
 // 📌 GET: Obtener todos los usuarios
 app.get('/api/users', async (req, res) => {
