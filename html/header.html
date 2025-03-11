@@ -75,6 +75,101 @@
             </button>
         </div>
     </header>
+
+    <body>
+        <!-- Contenedor principal -->
+        <div class="particle-background"></div>
+    
+        <div class="container">
+            <div class="options-container">
+                <!-- Opciones con imágenes, cada una con su enlace -->
+                <div class="option" id="personajes">
+                    <a href="prueba.html">
+                        <img src="https://static.wikia.nocookie.net/mmotaku/images/d/de/Anime-bleach-characters_431649.jpg/revision/latest?cb=20160326124331" alt="Personajes">
+                        <p>Ichigo Kurosaki</p>
+                    </a>
+                </div>
+                <div class="option" id="rukia">
+                    <a href="rukia.html">
+                        <img src="https://example.com/rukia.jpg" alt="Rukia Kuchiki">
+                        <p>Rukia Kuchiki</p>
+                    </a>
+                </div>
+                <div class="option" id="renji">
+                    <a href="renji.html">
+                        <img src="https://example.com/renji.jpg" alt="Renji Abarai">
+                        <p>Renji Abarai</p>
+                    </a>
+                </div>
+                <div class="option" id="orihime">
+                    <a href="orihime.html">
+                        <img src="https://example.com/orihime.jpg" alt="Orihime Inoue">
+                        <p>Orihime Inoue</p>
+                    </a>
+                </div>
+                <div class="option" id="ulquiorra">
+                    <a href="ulquiorra.html">
+                        <img src="https://example.com/ulquiorra.jpg" alt="Ulquiorra Cifer">
+                        <p>Ulquiorra Cifer</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="particlesCanvas"></div>
+        <script>
+            const canvas = document.createElement("canvas");
+            document.getElementById("particlesCanvas").appendChild(canvas);
+            const ctx = canvas.getContext("2d");
+    
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+    
+            const particles = [];
+    
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 4 + 1;
+                    this.speedY = Math.random() * 1.5 - 1;
+                    this.alpha = Math.random() * 0.8 + 0.2;
+                    this.color = ["#00FFFF", "#00A2FF", "#9400D3"][Math.floor(Math.random() * 3)];
+                }
+    
+                update() {
+                    this.y -= this.speedY;
+                    if (this.y <= 0) this.y = canvas.height;
+                }
+    
+                draw() {
+                    ctx.globalAlpha = this.alpha;
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+    
+            function init() {
+                for (let i = 0; i < 100; i++) {
+                    particles.push(new Particle());
+                }
+            }
+    
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach((p) => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+    
+            init();
+            animate();
+            </script>
+        
     <div id="google_translate_element"></div>
 <script type="text/javascript">
     function googleTranslateElementInit() {
@@ -103,5 +198,7 @@
 
     
     <script src="../js/header.js"></script>
+    
+    
 </body>
 </html>

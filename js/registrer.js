@@ -132,3 +132,97 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modalPerfil = document.getElementById("profileModal");
+    const openModalPerfil = document.getElementById("openProfileModal");
+    const closeModalPerfil = document.getElementById("closeProfileModal");
+    const guardarImagenPerfil = document.getElementById("guardarImagenPerfil");
+    const cancelarModalPerfil = document.getElementById("cancelarModalPerfil");
+    const modalImagesPerfil = document.querySelectorAll(".modal-gallery .modal-image");
+    const previewProfilePicture = document.getElementById("previewProfilePicture");
+
+    let selectedProfileImageUrl = "";
+
+    // Abrir modal
+    openModalPerfil.addEventListener("click", () => {
+        modalPerfil.style.display = "flex";
+    });
+
+    // Cerrar modal
+    closeModalPerfil.addEventListener("click", () => {
+        modalPerfil.style.display = "none";
+    });
+
+    // Seleccionar imagen de perfil
+    modalImagesPerfil.forEach(image => {
+        image.addEventListener("click", () => {
+            // Quitar la clase "selected" de todas las imágenes
+            modalImagesPerfil.forEach(img => img.classList.remove("selected"));
+
+            // Agregar la clase "selected" a la imagen clickeada
+            image.classList.add("selected");
+
+            selectedProfileImageUrl = image.getAttribute("data-img-url");
+            previewProfilePicture.src = selectedProfileImageUrl;
+        });
+    });
+
+    // Guardar imagen seleccionada
+    guardarImagenPerfil.addEventListener("click", () => {
+        if (selectedProfileImageUrl) {
+            alert("Imagen de perfil seleccionada.");
+            modalPerfil.style.display = "none";
+        } else {
+            alert("Por favor, selecciona una imagen.");
+        }
+    });
+
+    // Cancelar selección
+    cancelarModalPerfil.addEventListener("click", () => {
+        modalPerfil.style.display = "none";
+    });
+
+    // Enviar datos al backend
+    document.getElementById("registerForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const userData = {
+            nombre,
+            email,
+            password,
+            imagen_perfil: selectedProfileImageUrl || "default-avatar.png"
+        };
+
+        try {
+            const response = await fetch("http://localhost:3000/api/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(userData),
+            });
+
+            const data = await response.json();
+            console.log("Respuesta del servidor:", data);
+
+            if (response.ok) {
+                // Guardar en localStorage
+                localStorage.setItem("user", JSON.stringify(data));
+
+                alert("Usuario registrado con éxito.");
+                window.location.href = "perfil.html"; // Redirigir al perfil
+            } else {
+                alert("Error al registrar el usuario.");
+            }
+        } catch (error) {
+            console.error("Error al registrar el usuario:", error);
+            alert("Hubo un error al registrar el usuario.");
+        }
+    });
+});
