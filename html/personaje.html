@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Personaje</title>
+    <link rel="stylesheet" href="../css/personaje.css">
+</head>
+<body>
+
+    <div class="container">
+        <button onclick="window.history.back()">⬅ Volver</button>
+
+        <div class="content">
+            <!-- MENÚ IZQUIERDA -->
+            <div class="sidebar">
+                <h2 id="nombre"></h2>
+                <p><strong>Raza:</strong> <span id="raza"></span></p>
+                <p><strong>Cumpleaños:</strong> <span id="cumpleaños"></span></p>
+                <p><strong>Altura:</strong> <span id="altura"></span></p>
+                <p><strong>Peso:</strong> <span id="peso"></span></p>
+                <p><strong>Afiliación:</strong> <span id="afiliacion"></span></p>
+                <p><strong>Ocupación:</strong> <span id="ocupacion"></span></p>
+                <p><strong>Shikai:</strong> <span id="shikai"></span></p>
+                <p><strong>Bankai:</strong> <span id="bankai"></span></p>
+            </div>
+
+            <!-- IMAGEN PRINCIPAL -->
+            <div class="main-content">
+                <img id="main-image" src="https://via.placeholder.com/400x500?text=Sin+Imagen" alt="Imagen Principal">
+            </div>
+        </div>
+
+        <!-- GALERÍA DE IMÁGENES (MÁS ABAJO) -->
+        <div class="gallery">
+            <h2>Galería</h2>
+            <div class="thumbnail-container" id="galeria"></div>
+        </div>
+
+        <!-- INFORMACIÓN DEL PERSONAJE -->
+        <div class="description">
+            <h2>Poderes</h2>
+            <p id="poderes"></p>
+
+            <h2>Habilidades</h2>
+            <p id="habilidades"></p>
+
+            <h2>Nivel de Poder</h2>
+            <p id="nivel_de_poder"></p>
+
+            <h2>Historia</h2>
+            <p id="historia"></p>
+
+            <h2>Personalidad</h2>
+            <p id="personalidad"></p>
+
+            <h2>Batallas</h2>
+            <p id="batallas"></p>
+        </div>
+    </div>
+
+    <script src="../js/personaje.js"></script>
+
+</body>
+</html>

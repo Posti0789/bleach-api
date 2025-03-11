@@ -1,0 +1,197 @@
+/* Estilos generales */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 2px solid #ff4500;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 69, 0, 0.5);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón Volver */
+button {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #e03e00;
+    transform: scale(1.05);
+}
+
+/* Estructura del contenido */
+.content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Menú lateral con datos */
+.sidebar {
+    flex: 1;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    animation: slideIn 0.7s ease-in-out;
+}
+
+/* Animación de aparición lateral */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sidebar h2 {
+    color: #ff4500;
+    border-bottom: 2px solid #ff4500;
+    padding-bottom: 5px;
+}
+
+.sidebar p {
+    margin: 5px 0;
+}
+
+/* Imagen principal */
+.main-content {
+    flex: 2;
+    text-align: center;
+}/* Imagen principal */
+#main-image {
+    width: 350px; /* Tamaño uniforme */
+    height: 450px;
+    object-fit: cover; /* Ajusta la imagen sin bordes negros */
+    background-color: transparent;
+    border: 3px solid #ff4500;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Miniaturas de la galería */
+.thumbnail-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ajusta la miniatura sin distorsión */
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto de hover en la imagen principal */
+#main-image:hover {
+    transform: scale(1.05);
+}
+
+/* Efecto de hover en miniaturas */
+.thumbnail-container img:hover {
+    transform: scale(1.1);
+    border-color: #ff4500;
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.8);
+}
+
+
+
+/* Efecto cuando se cambia la imagen */
+.change-image {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+#main-image:hover {
+    transform: scale(1.05);
+}
+
+/* GALERÍA DE IMÁGENES (MÁS ABAJO) */
+.gallery {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.thumbnail-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto de hover en la galería */
+.thumbnail-container img:hover {
+    transform: scale(1.1);
+    border-color: #ff4500;
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.8);
+}
+
+/* Bloques de información */
+.description {
+    text-align: left;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.3s forwards;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .thumbnail-container img {
+        width: 60px;
+        height: 60px;
+    }
+}
