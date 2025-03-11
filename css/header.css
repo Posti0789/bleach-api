@@ -545,4 +545,53 @@ body {
         opacity: 1;
         transform: scale(1);
     }
+=======
+/* Ajuste dinámico del menú para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 25vw; /* Un poco más grande en tablets */
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50vw; /* Ocupa la mitad de la pantalla en móviles */
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 70vw; /* Más ancho en pantallas muy pequeñas */
+        max-width: 200px;
+    }
+}
+/* Sidebar en modo oscuro */
+.dark-theme .sidebar {
+    background: #121212; /* Un fondo más oscuro */
+    box-shadow: 4px 0px 10px rgba(255, 255, 255, 0.1); /* Sombra más sutil */
+}
+
+/* Estilo de los enlaces en modo oscuro */
+.dark-theme .menu a {
+    color: #f1f1f1; /* Texto más claro */
+}
+
+.dark-theme .menu a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Resalte más claro */
+}
+
+/* Submenús en modo oscuro */
+.dark-theme .submenu-items {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Ícono de menú en modo oscuro */
+.dark-theme .menu-toggle {
+    background: #444;
+}
+
+.dark-theme .menu-toggle:hover {
+    background: #555;
 }
