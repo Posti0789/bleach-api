@@ -254,15 +254,6 @@ header:hover {
     }
 }
 
-.logo img {
-    animation: fadeIn 1s ease-out;
-}
-
-/* Efecto de escala (crecer) al pasar el ratón */
-.logo img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño del logo */
-    transition: transform 0.3s ease;
-}
 
 /* Efecto de pulsación (expansión y contracción continua) */
 @keyframes pulse {
@@ -455,72 +446,118 @@ body {
     height: 100%;
     z-index: -1;
     pointer-events: none;
-}
-/* Contenedor principal */
+}/* Contenedor principal */
 .container {
-    width: 90%;
-    margin: 150px auto;
-    margin-top: 230px;
-    text-align: center;
+
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Contenedor de opciones */
 .options-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
-}
-
-/* Cada opción (personaje) */
-.option {
-    background: linear-gradient(135deg, #ff4500, #a00000);
-    border: 3px solid white;
+    max-width: 900px;
+    padding: 20px;
+    background: rgba(26, 26, 26, 0.8);
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Opciones individuales */
+.option {
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
-    width: 180px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.option:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
-}
-
-/* Imágenes de personajes */
+/* Imágenes */
 .option img {
     width: 100%;
-    height: 220px;
+    height: 180px;
     object-fit: cover;
-    border-bottom: 3px solid white;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
-/* Texto debajo de la imagen */
+/* Efecto al pasar el mouse */
+.option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 69, 0, 0.7);
+}
+
+.option img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+}
+
+/* Texto */
 .option p {
+    margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    margin: 0;
+    color: #ff4500;
 }
 
-/* Estilo de los enlaces */
-.option a {
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-/* Diseño responsivo */
+/* Diseño Responsivo */
 @media (max-width: 768px) {
     .options-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
 
-    .option {
-        width: 90%;
+    .option img {
+        height: 140px;
+    }
+
+    .option p {
+        font-size: 14px;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .options-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .option p {
+        font-size: 0.9rem;
+    }
+
+    .user-info {
+        max-width: 250px;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-name {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .options-container {
+        grid-template-columns: 1fr;
+    }
+
+    .option p {
+        font-size: 0.8rem;
+    }
+
+    .user-info {
+        max-width: 220px;
     }
 }
 
@@ -543,9 +580,10 @@ body {
     }
     100% {
         opacity: 1;
+       
         transform: scale(1);
     }
-=======
+}
 /* Ajuste dinámico del menú para diferentes tamaños de pantalla */
 @media (max-width: 1024px) {
     .sidebar {
@@ -595,3 +633,53 @@ body {
 .dark-theme .menu-toggle:hover {
     background: #555;
 }
+
+
+
+
+
+/*translate*/
+
+/* Estilos para el contenedor del traductor */
+#google_translate_element {
+    position: absolute;
+    top: 10px;
+    right: 100px; /* Ajusta según sea necesario */
+    z-index: 1000;
+    background-color: #222;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 69, 0, 0.5);
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Animación al aparecer */
+#google_translate_element {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Ocultar el logotipo de Google Translate */
+.goog-te-gadget {
+    color: white !important;
+    font-size: 14px !important;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Personalizar el selector de idioma */
+.goog-te-combo {
+    background-color: #111;
+    color: white;
+    border: 1px solid #ff4500;
+    border-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+/* Efecto hover */
+.goog-te-combo:hover {
+    background-color: #ff4500;
+    color: black;
+}
+
